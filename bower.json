@@ -1,0 +1,32 @@
+{
+  "name": "dev",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alexplummer/framework",
+  "authors": [
+    "alex plummer"
+  ],
+  "description": "personal framework",
+  "main": "bower.json",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "alex",
+    "plummer",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "modernizr": "~3.2.0",
+    "jquery": "~2.1.4",
+    "normalize.css": "~3.0.3",
+    "dw-bxslider-4": "~4.2.5"
+  }
+}
