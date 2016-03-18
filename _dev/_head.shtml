@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<!-- build:css style/style.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="../bower_components/normalize.css/normalize.css" />
+	<!-- endbower -->
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/fontello/fontello.css">
+	<!-- endbuild -->
+</head>
+<body>

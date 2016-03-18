@@ -1,0 +1,9 @@
+
+	<!-- build:js script/script.js -->
+	<!-- bower:js -->
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
+	<script src="script/script.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

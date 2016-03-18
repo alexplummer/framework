@@ -4,12 +4,19 @@
   "description": "Personal framework",
   "main": "gulpfile.js",
   "devDependencies": {
+    "connect-ssi": "^1.1.0",
     "gulp-clean": "^0.3.1",
     "gulp-connect": "^2.3.1",
+    "gulp-copy": "0.0.2",
+    "gulp-fontello": "^0.4.5",
+    "gulp-fontello-import": "0.0.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-inject": "^4.0.0",
     "gulp-jshint": "^2.0.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-minify-html": "^1.0.6",
+    "gulp-open": "^1.0.0",
     "gulp-replace": "^0.5.4",
     "gulp-rev": "^7.0.0",
     "gulp-sass": "^2.2.0",
@@ -17,9 +24,6 @@
     "gulp-usemin": "^0.3.21",
     "gulp-watch": "^4.3.5",
     "wiredep": "^3.0.0"
-  },
-  "scripts": {
-    "test": "test"
   },
   "repository": {
     "type": "git",
