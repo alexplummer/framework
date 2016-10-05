@@ -1,0 +1,84 @@
+
+// Colour palette
+// ============
+// Modify these files for each new site
+
+$clr-primary:   #2E4E8E;
+$clr-secondary: #FBA919;
+$clr-tertiary:  #755E59;
+$clr-hlight:    #2E4E8E;
+$clr-shade:     #BD3942;
+
+$clr-link: #BD3942;
+
+$clr-light:   #DDDDDD;
+$clr-lighter: #EEEEEE;
+$clr-dark:    #666666;
+$clr-darker:  #333333;
+
+$clr-primary-textoverlay:   #FFFFFF;
+$clr-secondary-textoverlay: #FFFFFF;
+$clr-tertiary-textoverlay:  #FFFFFF;
+$clr-hlight-textoverlay:    #FFFFFF;
+$clr-shade-textoverlay:     #FFFFFF;
+
+
+// Typography
+// ============
+// Modify these files for each new site
+
+$font-header: 'open sans', sans-serif;
+$font-body:   'open sans', sans-serif;
+$font-quote:  'Pacifico', serif;
+$font-light:  'open sans', sans-serif;
+$font-heavy:  'Pacifico', serif;
+
+// X-Height modifiers
+$xheight-header: 1;
+$xheight-body:   1;
+
+
+// Scales
+// ============
+// Modify these files for each new site
+
+// Font sizes
+$font-xxxl: /* 96px */ 6      * 1rem;
+$font-xxl:  /* 48px */ 3      * 1rem;
+$font-xl:   /* 36px */ 2.25   * 1rem;
+$font-l:    /* 24px */ 1.5    * 1rem;
+$font-m:    /* 18px */ 1.125  * 1rem;
+$font-s:    /* 16px */ 1      * 1rem;
+$font-xs:   /* 12px */ 0.75   * 1rem;
+$font-xxs:  /*  9px */ 0.5625 * 1rem;
+
+// Baseline
+$font-body:     $font-s;
+$font-baseline: $font-body * 1.5;
+
+// Distances
+$size-xl: /* 96px */ $font-baseline * 4;
+$size-l:  /* 48px */ $font-baseline * 2;
+$size-m:  /* 24px */ $font-baseline;
+$size-s:  /* 12px */ $font-baseline / 2;
+$size-xs: /*  6px */ $font-baseline / 4;
+
+
+// Grid
+// ============
+// Modify these files for each new site
+
+// Breakpoints
+$tablet:  768px;
+$laptop:  992px;
+$desktop: 1200px;
+
+// Containers
+$container-tablet:  744px;
+$container-laptop:  944px;
+$container-desktop: 1152px;
+
+// Columns & margins
+$grid-columns: 12;
+$gutter-width: $size-m;
+$outer-margin: $size-m;

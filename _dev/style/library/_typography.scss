@@ -1,0 +1,88 @@
+
+// Element Lists
+// ============
+// Modify these files for each new site
+
+// Header elements
+$type-header-els:
+h1, h2, h3, h4, h5, h6;
+
+// Non-header elements
+$type-normal-els:
+p, a, li, label, input, textarea, legend, button,
+select, blockquote, dt, dd, figure, figcaption, address, ul,
+ol, strong, b, br, span, th, td, code;
+
+// All elements
+$type-all-els:
+join($type-header-els, $type-normal-els);
+
+
+// Font types
+// ============
+// Modify these files for each new site
+
+// Header font
+@each $el in $type-header-els {
+    #{$el} {
+        font-family: : $font-header;
+    }
+}
+// Body font
+@each $el in $type-normal-els-els {
+    #{$el} {
+        font-family: : $font-body;
+    }
+}
+// Quote font
+blockquote {
+    font-family: : $font-quote;
+}
+
+
+// Font sizes
+// ============
+// Modify these files for each new site
+
+h1 {font-size: $font-xxl * $xheight-header}
+h2 {font-size: $font-xl  * $xheight-header}
+h3 {font-size: $font-l   * $xheight-header}
+h4 {font-size: $font-m   * $xheight-header}
+h5 {font-size: $font-m   * $xheight-header}
+
+@each $el in $type-normal-els {
+    #{$el} {
+        font-size: $font-body * $xheight-body;
+    }
+}
+
+
+// Lineheights
+// ============
+// Modify these files for each new site
+
+h1 {line-height: ceil($font-xxl / $font-baseline) * $font-baseline}
+h2 {line-height: ceil($font-xl  / $font-baseline) * $font-baseline}
+h3 {line-height: ceil($font-l   / $font-baseline) * $font-baseline}
+h4 {line-height: ceil($font-m   / $font-baseline) * $font-baseline}
+h5 {line-height: ceil($font-m   / $font-baseline) * $font-baseline}
+
+@each $el in $type-normal-els {
+    #{$el} {
+        line-height: $font-baseline;
+    }
+}
+
+
+// Margins
+// ============
+// Modify these files for each new site
+
+@each $el in $type-all-els {
+    #{$el} {
+        margin: 0;
+        padding: 0;
+        padding-top: $font-baseline / 2;
+        margin-bottom: $font-baseline / 2;
+    }
+}

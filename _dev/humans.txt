@@ -1,0 +1,43 @@
+/* PROJECT */
+
+	Site Name:
+	Site URL:
+	Created:
+	Standards:
+	Components:
+	Software:
+	Plugins:
+	Web Design:
+
+/* AUTHOR */
+
+	Name:
+	Nickname:
+	Title:
+	Location:
+	Site:
+	Blog:
+	Contact:
+	Donation:
+
+/* SOCIAL */
+
+	About.me:
+	WordPress:
+	Linkedin:
+	Twitter:
+	Plugins:
+	Themes:
+	Facebook:
+	Google+:
+	Instagram:
+	YouTube:
+	Tumblr:
+
+/* META */
+
+	Built with: HTML, CSS, jQuery, JavaScript
+
+/* THANKS */
+
+	To everyone who shares, likes, comments, and contributes!

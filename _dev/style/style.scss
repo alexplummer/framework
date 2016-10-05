@@ -1,2 +1,27 @@
+
+// Setup
+// ============
+// Modify these files for each new site
+
+@import "setup/_setup";
+
+
+// Library
+// ============
+// Standard, non-changing variables and mixins
+
+/* csslint ignore:start */
+@import "library/_normalize";
+@import "library/_typography";
+@import "library/mixins/_flexbox";
+@import "library/mixins/_grid";
+/* csslint ignore:end */
+
+
+// Components
+// ============
+// User components, these are auto injected by Gulp
+
 /* inject:imports */
+@import "components/_test.scss";
 /* endinject */

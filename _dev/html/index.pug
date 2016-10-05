@@ -1,0 +1,785 @@
+include includes/_head.html
+
+main
+	.row
+		.col-right
+			h1 Testing display of HTML elements
+			h2 This is 2nd level heading
+			p This is a test paragraph.
+			h3 This is 3rd level heading
+			p This is a test paragraph.
+			h4 This is 4th level heading
+			p This is a test paragraph.
+			h5 This is 5th level heading
+			p This is a test paragraph.
+			h6 This is 6th level heading
+			p This is a test paragraph.
+			h2 Basic block level elements
+			p
+				| This is a normal paragraph (
+				code p
+				|  element).
+				| To add some length to it, let us mention that this page was
+				| primarily written for testing the effect of
+				strong user style sheets
+				| .
+				| You can use it for various other purposes as well, like just checking how
+				| your browser displays various HTML elements by default.
+				| It can also be useful when testing conversions from HTML
+				| format to other formats, since some elements can go wrong then.
+			p
+				| This is another paragraph. I think it needs to be added that
+				| the set of elements tested is not exhaustive in any sense. I have selected
+				| those elements for which it can make sense to write user style sheet rules,
+				| in my opionion.
+			div
+				| This is a
+				code div
+				|  element. Authors may use such elements instead
+				| of paragraph markup for various reasons. (End of
+				code div
+				| .)
+			blockquote
+				p
+					| This is a block quotation containing a single
+					| paragraph. Well, not quite, since this is not
+					em really
+					| quoted text, but I hope you understand the point. After all, this
+					| page does not use HTML markup very normally anyway.
+			p
+				| The following contains address information about the author, in an
+				code address
+				| element.
+			address
+				a(href='../personal.html', lang='fi', hreflang='en') Jukka Korpela
+				| ,
+				a(href='mailto:jkorpela@cs.tut.fi') jkorpela@cs.tut.fi
+				br
+				| Päivänsäteenkuja 4 A, Espoo, Finland
+			h2 Lists
+			p
+				| This is a paragraph before an
+				strong unnumbered
+				|  list (
+				code ul
+				| ). Note that
+				| the spacing between a paragraph and a list before or after that is hard
+				| to tune in a user style sheet. You can't guess which paragraphs are
+				| logically related to a list, e.g. as a "list header".
+			ul
+				li
+					| One.
+				li
+					| Two.
+				li
+					| Three. Well, probably this list item should be longer. Note that
+					| for short items lists look better if they are compactly presented,
+					| whereas for long items, it would be better to have more vertical spacing between items.
+				li
+					| Four. This is the last item in this list.
+					| Let us terminate the list now without making any more fuss about it.
+			p
+				| The following is a
+				code menu
+				|  list:
+			menu
+				li
+					| One.
+				li
+					| Two.
+				li
+					| Three. Well, probably this list item should be longer so that it will
+					| probably wrap to the next line in rendering.
+			p
+				| The following is a
+				code dir
+				|  list:
+			dir
+				li
+					| One.
+				li
+					| Two.
+				li
+					| Three. Well, probably this list item should be longer so that it will
+					| probably wrap to the next line in rendering.
+			p
+				| This is a paragraph before a
+				strong numbered
+				|  list (
+				code ol
+				| ). Note that
+				| the spacing between a paragraph and a list before or after that is hard
+				| to tune in a user style sheet. You can't guess which paragraphs are
+				| logically related to a list, e.g. as a "list header".
+			ol
+				li
+					| One.
+				li
+					| Two.
+				li
+					| Three. Well, probably this list item should be longer. Note that if
+					| items are short, lists look better if they are compactly presented,
+					| whereas for long items, it would be better to have more vertical spacing between items.
+				li
+					| Four. This is the last item in this list.
+					| Let us terminate the list now without making any more fuss about it.
+			p
+				| This is a paragraph before a
+				strong definition
+				|  list (
+				code dl
+				| ).
+				| In principle, such a list should consist of
+				em terms
+				|  and associated
+				| definitions.
+				| But many authors use
+				code dl
+				|  elements for fancy "layout" things. Usually the
+				| effect is not
+				em too
+				|  bad, if you design user style sheet rules for
+				code dl
+				| which are suitable
+				| for real definition lists.
+			dl
+				dt
+					| recursion
+				dd
+					| see recursion
+				dt
+					| recursion, indirect
+				dd
+					| see indirect recursion
+				dt
+					| indirect recursion
+				dd
+					| see recursion, indirect
+				dt
+					| term
+				dd
+					| a word or other expression taken into specific use in
+					| a well-defined meaning, which is often defined rather rigorously, even
+					| formally, and may differ quite a lot from an everyday meaning
+			h2 Text-level markup
+			ul
+				li
+					abbr(title='Cascading Style Sheets') CSS
+					|  (an abbreviation;
+					code abbr
+					|  markup used)
+				li
+					acronym(title='radio detecting and ranging') radar
+					|  (an acronym;
+					code acronym
+					|  markup used)
+				li
+					b bolded
+					|  (
+					code b
+					|  markup used - just bolding with unspecified
+					|        semantics)
+				li
+					big big thing
+					|  (
+					code big
+					|  markup used)
+				li
+					font(size='6') large size
+					|  (
+					code font size=6
+					|  markup used)
+				li
+					font(face='Courier') Courier font
+					|  (
+					code font face=Courier
+					|  markup used)
+				li
+					font(color='red') red text
+					|  (
+					code font color=red
+					|  markup used)
+				li
+					cite Origin of Species
+					|  (a book title;
+					code cite
+					|  markup used)
+				li
+					code a[i] = b[i] + c[i);
+					|  (computer code;
+					code code
+					|  markup used)
+				li
+					| here we have some
+					del deleted
+					|  text (
+					code del
+					|  markup used)
+				li
+					| an
+					dfn octet
+					|  is an entity consisting of eight bits
+					|        (
+					code dfn
+					|  markup used for the term being defined)
+				li
+					| this is
+					em very
+					|  simple (
+					code em
+					|  markup used for emphasizing
+					|        a word)
+				li
+					i(lang='la') Homo sapiens
+					|  (should appear in italics;
+					code i
+					|  markup used)
+				li
+					| here we have some
+					ins inserted
+					|  text (
+					code ins
+					|  markup used)
+				li
+					| type
+					kbd yes
+					|  when prompted for an answer (
+					code kbd
+					|  markup
+					|        used for text indicating keyboard input)
+				li
+					q Hello!
+					|  (
+					code q
+					|  markup used for quotation)
+				li
+					| He said:
+					q
+						| She said
+						q Hello!
+					|  (a quotation inside a quotation)
+				li
+					| you may get the message
+					samp Core dumped
+					|  at times
+					|        (
+					code samp
+					|  markup used for sample output)
+				li
+					small this is not that important
+					|  (
+					code small
+					|  markup used)
+				li
+					strike overstruck
+					|  (
+					code strike
+					|  markup used; note:
+					code s
+					|  is a nonstandard synonym for
+					code strike
+					| )
+				li
+					strong this is highlighted text
+					|  (
+					code strong
+					|        markup used)
+				li
+					| In order to test how subscripts and superscripts (
+					code sub
+					|  and
+					code sup
+					|  markup) work inside running text, we need some
+					|        dummy text around constructs like x
+					sub 1
+					|  and H
+					sub 2
+					| O
+					|        (where subscripts occur). So here is some fill so that
+					|        you will (hopefully) see whether and how badly the subscripts
+					|        and superscripts mess up vertical spacing between lines.
+					|        Now superscripts: M
+					sup lle
+					| , 1
+					sup st
+					| , and then some
+					|        mathematical notations: e
+					sup x
+					| , sin
+					sup 2
+					i x
+					| ,
+					|        and some nested superscripts (exponents) too:
+					|        e
+					sup
+						| x
+						sup 2
+					|  and f(x)
+					sup
+						| g(x)
+						sup a+b+c
+					|        (where 2 and a+b+c should appear as exponents of exponents).
+				li
+					tt text in monospace font
+					|  (
+					code tt
+					|  markup used)
+				li
+					u underlined
+					|  text (
+					code u
+					|  markup used)
+				li
+					| the command
+					code cat
+					var filename
+					|  displays the
+					|        file specified by the
+					var filename
+					|  (
+					code var
+					|  markup
+					|        used to indicate a word as a variable).
+			p
+				| Some of the elements tested above are typically displayed in a monospace
+				| font, often using the
+				em same
+				|  presentation for all of them. This
+				| tests whether that is the case on your browser:
+			ul
+				li
+					code This is sample text inside code markup
+				li
+					kbd This is sample text inside kbd markup
+				li
+					samp This is sample text inside samp markup
+				li
+					tt This is sample text inside tt markup
+		.col-right
+			h2 Links
+			ul
+				li
+					a(href='../index.html') main page
+				li
+					a(href='http://www.unicode.org/versions/Unicode4.0.0/ch06.pdf', title='Writing Systems and Punctuation', type='application/pdf') Unicode Standard, chapter 6
+			p
+				| This is a text paragraph that contains some
+				| inline links. Generally, inline links (as opposite to e.g. links
+				| lists) are problematic
+				| from the
+				a(href='http://www.useit.com') usability
+				|  perspective,
+				| but they may have use as
+				| “incidental”, less relevant links. See the document
+				cite
+					a(href='links.html') Links Want To Be Links
+				| .
+			h2 Forms
+			form(action='http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi')
+				div
+					input(type='hidden', name='hidden field', value='42')
+					| This is a form containing various fields (with some initial
+					| values (defaults) set, so that you can see how input text looks
+					| like without actually typing it):
+				div
+					label(for='but')
+						| Button:
+						button#but(type='submit', name='foo', value='bar')
+							| A cool
+							br
+							| button
+				div
+					label(for='f0')
+						| Reset button:
+						input#f0(type='reset', name='reset', value='Reset')
+				div
+					label(for='f1')
+						| Single-line text input field:
+						input#f1(name='text', size='20', value='Default text.')
+				div
+					label(for='f2') Multi-line text input field (textarea):
+					br
+					textarea#f2(name='textarea', rows='2', cols='20')
+						| Default text.
+				div
+					| The following two radio buttons are inside
+					| a
+					code fieldset
+					|  element with a
+					code legend
+					| :
+				fieldset
+					legend Legend
+					div
+						label(for='f3')
+							input#f3(type='radio', name='radio', value='1')
+							|  Radio button 1
+					div
+						label(for='f4')
+							input#f4(type='radio', name='radio', value='2', checked='')
+							|  Radio button 2 (initially checked)
+				fieldset
+					legend Check those that apply
+					div
+						label(for='f5')
+							input#f5(type='checkbox', name='checkbox')
+							|  Checkbox 1
+					div
+						label(for='f6')
+							input#f6(type='checkbox', name='checkbox2', checked='')
+							|  Checkbox 2 (initially checked)
+				div
+					label(for='f10')
+						| A
+						code select
+						|  element with
+						code size="1"
+						| (dropdown box):
+						select#f10(name='select1', size='1')
+							option
+								| one
+							option(selected='')
+								| two (default)
+							option
+								| three
+				div
+					label(for='f11')
+						| A
+						code select
+						|  element with
+						code size="3"
+						| (listbox):
+					br
+					select#f11(name='select2', size='3')
+						option
+							| one
+						option(selected='')
+							| two (default)
+						option
+							| three
+				div
+					label(for='f99')
+						| Submit button:
+						input#f99(type='submit', name='submit', value='Just a test')
+			h2 Tables
+			p
+				| The following table has a caption. The first row and the first column
+				| contain table header cells (
+				code th
+				|  elements) only; other cells
+				| are data cells (
+				code td
+				|  elements), with
+				code align="right"
+				| attributes:
+			table(summary='Each row names a Nordic country and specifies its total area and land area, in square kilometers')
+				caption Sample table: Areas of the Nordic countries, in sq km
+				tbody
+					tr
+						th(scope='col') Country
+						th(scope='col') Total area
+						th(scope='col') Land area
+					tr
+						th(scope='row') Denmark
+						td(align='RIGHT')  43,070
+						td(align='RIGHT')  42,370
+					tr
+						th(scope='row') Finland
+						td(align='RIGHT') 337,030
+						td(align='RIGHT') 305,470
+					tr
+						th(scope='row') Iceland
+						td(align='RIGHT') 103,000
+						td(align='RIGHT') 100,250
+					tr
+						th(scope='row') Norway
+						td(align='RIGHT') 324,220
+						td(align='RIGHT') 307,860
+					tr
+						th(scope='row') Sweden
+						td(align='RIGHT') 449,964
+						td(align='RIGHT') 410,928
+			h2 Character test
+			p
+				| The following table has some sample characters with
+				| annotations. If the browser’s default font does not
+				| contain all of them, they may get displayed using backup fonts.
+				| This may cause stylistic differences, but it should not
+				| prevent the characters from being displayed at all.
+			table
+				tbody
+					tr
+						th Char.
+						th Explanation
+						th
+							| Notes
+					tr
+						td ê
+						td e with circumflex
+						td
+							| Latin 1 character, should be ok
+					tr
+						td —
+						td em dash
+						td
+							| Windows Latin 1 character, should be ok, too
+					tr
+						td Ā
+						td A with macron (line above)
+						td
+							| Latin Extended-A character, not present in all fonts
+					tr
+						td Ω
+						td capital omega
+						td
+							| A Greek letter
+					tr
+						td −
+						td minus sign
+						td
+							| Unicode minus
+					tr
+						td ⌀
+						td diameter sign
+						td
+							| relatively rare in fonts
+			h2 Hyphenation
+			p
+				| In the following, a width setting should cause some hyphenation,
+				| depending on support to various methods of hyphenation.
+			h3 CSS-based hyphenation
+			p.limited.hyphens
+				| Until recently the great majority of naturalists believed that species were immutable productions, and had been separately created. This view has been ably maintained by many authors.
+			h3 JavaScript-driven hyphenation
+			p.limited.hyphenate
+				| Until re­cently the great ma­jor­ity of nat­u­ral­ists be­lieved that species were im­mutable pro­duc­tions, and had been sep­a­rately cre­ated. This view has been ably main­tained by many au­thors.
+			h3 Explicit hyphenation hints (soft hyphens)
+			p.limited
+				| Un­til re­cent­ly the great
+				| ma­jor­i­ty of nat­u­ral­ists
+				| be­lieved that spe­cies were
+				| im­mu­ta­ble
+				| pro­duc­tions,
+				| and had been sep­a­rate­ly cre­at­ed.
+				| This view has been ably main­tain­ed by many au­thors.
+			hr(title='Information about this document')
+			address
+				a(href='../personal.html', hreflang='en', lang='fi') Jukka Korpela
+			div
+				a(title='ISO 8601, the date and time representation standard', href='../iso8601.html')
+					| Date
+				|  of creation: 2000-09-15.
+				| Last update: 2013-03-21.
+
+
+section#baseline
+	.section.typeset
+		.single
+			h1 Lorem ipsum dolor sit amet
+			p.caption Labore reprehenderit corporis ullam distinctio ex.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+			ol
+				li Perferendis tempor
+				li Minim eiusmod
+				li Tempor
+				li Minus quia sint
+			h2 Voluptates mollitia quod tempore laboris commodi
+			p
+				| Proident dolores corrupti consequatur voluptatibus labore commodi quos.
+				b Incidunt mollitia
+				|  tempora assumenda laborum voluptate accusamus dolore optio incididunt. Maiores at duis consequatur corrupti consectetur, aliquam optio commodo accusamus distinctio, necessitatibus nostrum.
+			p
+				| Optio, nesciunt, quo, fugiat, blanditiis at quas excepturi quae maiores vel corrupti voluptate cupiditate nemo! In, eius quidem harum quibusdam ratione non. Iste, deleniti, fugit, voluptas aperiam qui adipisci provident ab accusantium possimus eveniet voluptate consectetur!
+			h2 Repellat optio
+			h3 Ad perferendis omnis
+			p
+				| Pariatur animi quis. Dolorem cupiditate
+				a(href='#') praesentium duis
+				|  iusto corrupti nobis nostrud, exercitation consequatur. Nulla minim dignissimos reprehenderit voluptatem. Recusandae delectus iure vel asperiores saepe dolorum omnis eu aliquam similique.
+			blockquote
+				p
+					| Fuga rerum laboris officia cupidatat, excepteur aliquid ut quis facere, cumque harum optio dignissimos. Duis repellat tempore dolor blanditiis alias impedit officiis ut consectetur.
+			pre.
+			h4 Quibusdam illum quo
+			p
+				| Quos laboris eos, laborum animi. Ea blanditiis ducimus fugiat officia nostrud consectetur recusandae excepteur. Quis qui maiores distinctio facilis saepe eos.
+			h5 Consectetur nobis consequat voluptates eiusmod
+			p
+				| Iure vel nostrud repellendus.
+				b Nostrud
+				|  autem consequatur, provident officiis qui, mollit exercitation. Veniam minus cillum suscipit aliqua, tenetur. Anim mollitia necessitatibus ad quos consectetur voluptatem do 
+				a(href='#') corporis
+				| .
+			ul
+				li Perferendis tempor
+				li Minim eiusmod
+				li Tempor
+				li Minus quia sint
+			p
+				| Corporis eligendi minim, enim proident reprehenderit iusto.
+				i Reprehenderit
+				|  commodo commodi, repudiandae voluptas saepe sint libero. Praesentium eius distinctio ullamco vero iusto praesentium eligendi animi. Consectetur dolore vero similique dolore, ut labore omnis.
+			h6 Maxime alias anim similique
+			p
+				| Omnis corporis assumenda nisi ullam dolores culpa repellat. Molestias praesentium necessitatibus minus, reiciendis officiis commodo incidunt. Consectetur nostrud odio numquam tenetur.
+			hr
+			h1 Heading level 1
+			h2 Heading level 2
+			h3 Heading level 3
+			h4 Heading level 4
+			h5 Heading level 5
+			h6 Heading level 6
+			p
+				| Paragraph with
+				b bold
+				| ,
+				i italic
+				| ,
+				a(href='#') link
+				|  and
+				code code
+				|  styles.
+			blockquote
+				p Blockquote
+			p.caption Caption text
+			ol
+				li Ordered list element one
+				li Ordered list element two
+				li Ordered list element three
+			ul
+				li Unordered list element one
+				li Unordered list element two
+				li Unordered list element three
+	.section.typeset
+		.column.column--duo
+			h6 Column one
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+		.column.column--duo
+			h6 Column two
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+	.section.typeset
+		.column.column--trio
+			h6 Column one
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+		.column.column--trio
+			h6 Column two
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+		.column.column--trio
+			h6 Column three
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+	.section.typeset
+		.column.column--quad
+			h6 Column one
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+		.column.column--quad
+			h6 Column two
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+		.column.column--quad
+			h6 Column three
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+		.column.column--quad
+			h6 Column four
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip reprehenderit nihil veniam tempora do maxime omnis reiciendis elit tempora.
+	.section.typeset
+		.column.column--main
+			h6 Main column
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+		.column.column--sidebar
+			h6 Sidebar
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip.
+	.section.typeset
+		.column.column--sidebar
+			h6 Sidebar
+			p
+				| Quos atque officia quod.
+				i Suscipit delectus
+				|  cupidatat, quia nulla numquam aute cillum proident. Maiores iusto culpa molestias quam id tenetur saepe impedit reiciendis itaque ducimus itaque nostrud. Tempor aliquip, culpa earum itaque sed consequatur minus aliquip.
+		.column.column--main
+			h6 Main column
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+	.section.typeset
+		.column.column--main.column--right
+			h6 Main column
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p.caption.sidenote This is an inline caption.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+	.section.typeset
+		.column.column--main.column--left
+			h6 Main column
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p.caption.sidenote This is a long inline caption that will probably go across a couple of lines.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+			p
+				| Consectetur adipisicing elit, alias at autem magna aliquid
+				a(href='#') quam proident
+				|  quis aliquam. temporibus minus eius veniam cupidatat ex, voluptas fuga, quos, mollitia incidunt do officia facilis. molestiae consequat excepturi laborum perferendis tempor minim eiusmod minim minus quia sint.
+
+
+include includes/_under.html
