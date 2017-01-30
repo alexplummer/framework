@@ -1,0 +1,15 @@
+// Footer
+// ============
+// Styling for the footer module
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background: #eee;
+    padding-bottom: $size-m;
+
+    a {
+        display: block;
+        margin-bottom: 0;
+    }
+}

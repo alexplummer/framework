@@ -1,0 +1,20 @@
+{"couchPHP":
+    {
+        "couchIncludes": {
+        "href=\"style": "href=\"<cms:show k_site_link />style",
+        "src=\"script":"src=\"<cms:show k_site_link />script",
+        "href=\"img": "href=\"<cms:show k_site_link />img",
+        "src=\"img": "src=\"<cms:show k_site_link />img",
+        "a href=\"": "a href=\"<cms:show k_site_link />",
+        "index.html": "index.php",
+        "about.html": "about.php",
+        "contact.html": "contact.php",
+        "news.html": "news.php",
+        "legal.html": "legal.php"
+        },
+        "couchExcludes": {
+        "href=\"style": "href=\"<cms:show k_site_link />style",
+        "src=\"script":"src=\"<cms:show k_site_link />script"
+        }
+    }
+}

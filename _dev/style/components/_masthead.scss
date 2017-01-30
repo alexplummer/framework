@@ -1,0 +1,32 @@
+// Masthead
+// ============
+// Styling for the masthead module
+
+.masthead {
+    margin-bottom: $size-l;
+    
+    .brand, nav {
+        @extend %col-xs-6;
+    }
+    .brand {
+        background: $clr-primary;
+
+        h2 {
+            color: $clr-primary-textoverlay;
+            display: inline-block;
+        }
+    }
+    nav {
+        @extend %border-thin;
+        text-align: right;
+        padding: $size-s;
+        margin-top: $size-m;
+
+        a {
+            font-size: $font-m;
+            color: #aaa;
+            margin-left: $size-m;
+            text-decoration: none;
+        }
+    }
+}

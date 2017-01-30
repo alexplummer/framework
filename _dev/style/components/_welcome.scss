@@ -1,0 +1,14 @@
+// Welcome
+// ============
+// Styling for the welcome module
+
+.welcome {
+    @extend .split;
+
+    h3 {
+        @extend .icon-thumbs-up;
+        @extend .icon;
+        border-bottom: 1px dashed #aaa;
+        padding-bottom: $size-m;
+    }
+}
