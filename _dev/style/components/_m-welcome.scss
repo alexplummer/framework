@@ -1,0 +1,82 @@
+// Welcome
+// ============
+// Styling for the welcome module
+
+.m-welcome {
+    @extend .split;
+    background: #f9f9f9;
+
+    h3:first-of-type {
+        @extend .icon-thumbs-up;
+        @extend .icon;
+        border-bottom: 1px dashed #aaa;
+        padding-bottom: $size-m;
+    }
+    .color-vars-main, .color-vars-shades {
+        width: 45%;
+        display: inline-block;
+        margin: 0 0 $size-l 0;
+       
+        li {
+            list-style: none;
+            position: relative;
+            line-height: $font-xxl;
+            padding-left: 70px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+        li:nth-of-type(1):before {
+            background: $clr-primary;
+        }
+        li:nth-of-type(2):before {
+            background: $clr-secondary;
+        }
+        li:nth-of-type(3):before {
+            background: $clr-tertiary;
+        }
+        li:nth-of-type(4):before {
+            background: $clr-hlight;
+        }
+        li:nth-of-type(5):before {
+            background: $clr-shade;
+        }
+    }
+    .color-vars-shades {
+        
+        li:nth-of-type(1):before {
+            background: $clr-light;
+        }
+        li:nth-of-type(2):before {
+            background: $clr-lighter;
+        }
+        li:nth-of-type(3):before {
+            background: $clr-dark;
+        }
+        li:nth-of-type(4):before {
+            background: $clr-darker;
+        }
+    }
+    .font-vars {
+
+        li {
+             font-size: $font-xl;
+             line-height: $font-xxl;
+        }
+        li:nth-of-type(1) {
+            font-family: $font-header;
+        }
+        li:nth-of-type(2) {
+            font-family: $font-body;
+        }
+        li:nth-of-type(3) {
+            font-family: $font-quote;
+        }
+    }
+}

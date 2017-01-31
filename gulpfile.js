@@ -668,7 +668,7 @@ gulp.task('watch:gulp', function() {
 // BUILDS
 gulp.task('build:tmp', gulpsync.sync([
 	'clean:tmp',
-	['bower-install','fontello','inject-deps','clean:cssreports','clean:jsreports'],
+	['bower-install','fontello','inject-deps','clean-reports'],
 	['copy:scripts','copy:fonts','copy:images','sprites'],
 	'build-sass',
 	['lint-reports','html'],
@@ -679,7 +679,7 @@ gulp.task('build:prod', gulpsync.sync([
 	'copy:prod',
 	'images',
 	//'couch',
-	//'critical',
+	'critical',
 	'optimise'
 ]));
 

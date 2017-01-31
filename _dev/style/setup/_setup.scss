@@ -4,12 +4,12 @@
 // Colour scheme variables
 
 $clr-primary:   #3C9ADA;
-$clr-secondary: #F6631E;
+$clr-secondary: #F3AF4B;
 $clr-tertiary:  #80007F;
-$clr-hlight:    #F3AF4B;
+$clr-hlight:    #F6631E;
 $clr-shade:     #3F4747;
 
-$clr-link: #C0373F;
+$clr-link: $clr-hlight;
 $clr-link-hover: lighten($clr-link, 10%);
 
 $clr-light:   #BED4D2;
@@ -28,11 +28,9 @@ $clr-shade-textoverlay:     #FFFFFF;
 // ============
 // Font family definitions
 
-$font-header: 'Open Sans', sans-serif;
+$font-header: 'Montserrat', sans-serif;
 $font-body:   'Open Sans', sans-serif;
-$font-quote:  'Open Sans', sans-serif;
-$font-light:  'Open Sans', sans-serif;
-$font-heavy:  'Open Sans', sans-serif;
+$font-quote:  'Bevan', cursive;
 
 // Modify irregular xheight fonts
 $xheight-header: 1;
@@ -41,7 +39,7 @@ $xheight-body:   1;
 
 // Scales
 // ============
-// Scales used for type and spacing
+// Scales used for type and spacing (/16)
 
 // Font sizes
 $font-xxxl: /* 96px */ 6      * 1rem;
