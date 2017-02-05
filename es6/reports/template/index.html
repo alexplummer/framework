@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Lint Reports</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+    <style>
+    * {font-family: 'Baloo Chettan', cursive;}
+    pre {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 18px}
+    h3 {color: #6f0a0a;}
+    p {font-size: 18px;}
+    .stop {text-decoration: underline; cursor: pointer}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lint Reports</h1>
+        <p class='message'>Tab closes in <span class="time"></span> seconds, <span class="stop">click here</span> to keep open</p>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3><span class="glyphicon glyphicon-exclamation-sign"></span> JSHint Errors</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <pre class="lines"><!-- inject:jsReport -->
+<!-- endinject --></pre>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3><span class="glyphicon glyphicon-exclamation-sign"></span> CSSLint Errors</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <pre class="lines"><!-- inject:cssReport -->
+<!-- endinject --></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+var pre = document.querySelectorAll('pre'), i;
+for (i = 0; i < pre.length; ++i) {
+    //pre[i].innerHTML = fmt;
+}
+function countdown() {
+    // your code goes here
+    var count = 10;
+    var timerId = setInterval(function() {
+        count--;
+        document.querySelector('.time').innerHTML = count;
+        if(count == 0) {
+            // your code goes here
+            window.close();
+        }
+    }, 1000);
+    document.querySelector('.stop').addEventListener("click", function (event) {
+        clearInterval(timerId);
+        document.querySelector('.message').parentNode.removeChild(document.querySelector('.message'));
+    });
+}
+countdown();
+</script>
+</body>
+</html>

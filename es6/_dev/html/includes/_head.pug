@@ -1,0 +1,46 @@
+include ../_vars/_global-vars
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    // Primary meta
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    block title
+        title #{siteName}
+    <link rel="author" href="humans.txt">
+    <link rel="canonical" href="#">
+    // DNS Prefetch
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    // Meta, OG, Twitter, Apple
+    <meta name="description" content="#{siteDescription}">
+    <meta property="article:author" content="#{siteAuthor}">
+    <meta name="robots" content="index, follow">
+    <meta property="fb:app_id" content="123456789">
+    <meta property="og:url" content="#{siteURL}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="#{siteName}">
+    <meta property="og:description" content="#{siteDescription}">
+    <meta property="og:site_name" content="#{siteName}">
+    <meta property="og:locale" content="en_UK">
+     block shareImage
+        <meta name="twitter:image" content="#{shareImage}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="#{siteURL}">
+    <meta name="twitter:title" content="#{siteName}">
+    <meta name="twitter:description" content="#{siteDescription}">
+    <meta name="apple-mobile-web-app-title" content="#{siteName}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bevan|Open+Sans|Montserrat" rel="stylesheet">
+    <!-- build:css style/style.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- endbuild -->
+    </head>
+<body>
+block content

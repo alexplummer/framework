@@ -1,0 +1,41 @@
+// Masthead
+// ============
+// Styling for the masthead module
+
+.m-masthead {
+    margin-bottom: $size-m;
+    
+    .brand {
+        @extend %col-xs-9;
+    }
+    nav {
+        @extend %col-xs-3;
+    }
+    .brand {
+        border-bottom-left-radius: 10px;
+        background: linear-gradient(to left, #fff 0%,  $clr-primary 100%);
+
+        p {
+            font-family: $font-quote;
+            color: $clr-primary-textoverlay;
+            display: inline-block;
+            font-size: $font-xl;
+            line-height: 1.1;
+            padding-top: $size-m;
+        }
+    }
+    nav {
+        text-align: right;
+        padding: $size-s;
+        margin-top: $size-m;
+
+        a {
+            @extend %border-thin;
+            font-family: $font-header;
+            text-transform: uppercase;
+            font-size: $font-m;
+            margin-left: $size-m;
+            text-decoration: none;
+        }
+    }
+}

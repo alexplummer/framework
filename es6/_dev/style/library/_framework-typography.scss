@@ -1,0 +1,210 @@
+
+// Element Lists
+// ============
+// Used to create various type styles 
+
+// Header elements
+$type-header-els:
+h1, h2, h3, h4, h5, h6;
+
+// Non-header elements
+$type-normal-els:
+p, a, li, label, input, textarea, legend, button,
+select, blockquote, dt, dd, figure, figcaption, address, ul,
+ol, strong, b, br, span, table, th, td, code, time, img, form;
+
+// All elements
+$type-all-els:
+join($type-header-els, $type-normal-els);
+
+
+// Font types
+// ============
+// Font families for different elements
+
+// Header font
+@each $el in $type-header-els {
+    #{$el}, .#{$el} {
+        font-family: $font-header;
+    }
+}
+// Body font
+@each $el in $type-normal-els {
+    #{$el} {
+        font-family: $font-body;
+    }
+}
+// All fonts
+@each $el in $type-all-els {
+    #{$el} {
+        color: $clr-shade;
+    }
+}
+// Quote font
+blockquote {
+    font-family: $font-quote;
+}
+
+
+// Font sizes
+// ============
+// Font sizes for headings and other elements
+
+h1, .h1 {font-size: $font-xxl * $xheight-header}
+h2, .h2 {font-size: $font-xl  * $xheight-header}
+h3, .h3 {font-size: $font-l   * $xheight-header}
+h4, .h4 {font-size: $font-m   * $xheight-header}
+h5, .h5 {font-size: $font-m   * $xheight-header}
+
+@each $el in $type-normal-els {
+    #{$el} {
+        font-size: $font-size-body * $xheight-body;
+    }
+}
+
+
+// Lineheights
+// ============
+// Lineheights for headings and other elements
+
+h1, .h1 {line-height: ceil($font-xxl / $font-baseline) * $font-baseline}
+h2, .h2 {line-height: ceil($font-xl  / $font-baseline) * $font-baseline}
+h3, .h3 {line-height: ceil($font-l   / $font-baseline) * $font-baseline}
+h4, .h4 {line-height: ceil($font-m   / $font-baseline) * $font-baseline}
+h5, .h5 {line-height: ceil($font-m   / $font-baseline) * $font-baseline}
+
+@each $el in $type-normal-els {
+    #{$el} {
+        line-height: $font-baseline;
+    }
+}
+
+
+// Margins
+// ============
+// Margins, aligned with baseline
+
+@each $el in $type-header-els {
+    #{$el} {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@each $el in $type-normal-els {
+    #{$el} {
+        margin: 0;
+        padding: 0;
+        padding-top: $font-baseline / 2;
+        margin-bottom: $font-baseline / 2;
+    }
+}
+
+table, form {
+    margin-top: $size-m;
+}
+
+h1, .h1 {
+    padding-top: $font-baseline*1.5;
+    margin-bottom: $font-baseline*1.5;
+}
+h2, .h2 {
+    padding-top: $font-baseline;
+    margin-bottom: $font-baseline;
+}
+h3, .h3 {
+    padding-top: $font-baseline;
+    margin-bottom: $font-baseline / 2;
+}
+h4, .h4, h5, .h5 {
+    padding-top: $font-baseline / 2;
+    margin-bottom: $font-baseline / 2;
+}
+
+
+// Responsive
+// ============
+// Responsive heading sizes
+
+// Tablet
+@media (max-width: $laptop - 1) {
+
+    h1, .h1 {font-size: $font-xl * $xheight-header; line-height: ceil($font-xl / $font-baseline) * $font-baseline}
+    h2, .h2 {font-size: $font-l  * $xheight-header; line-height: ceil($font-l  / $font-baseline) * $font-baseline}
+    h3, .h3 {font-size: $font-m  * $xheight-header; line-height: ceil($font-m  / $font-baseline) * $font-baseline}
+    h4, .h4 {font-size: $font-s  * $xheight-header; line-height: ceil($font-s  / $font-baseline) * $font-baseline}
+    h5, .h5 {font-size: $font-s  * $xheight-header; line-height: ceil($font-s  / $font-baseline) * $font-baseline}
+
+    @each $el in $type-header-els {
+        #{$el} {
+            padding-top: $font-baseline;
+            margin-bottom: $font-baseline;
+        }
+    }
+}
+// Mobile
+@media (max-width: $tablet - 1) {
+
+    h1, .h1 {font-size: $font-l * $xheight-header; line-height: ceil($font-l / $font-baseline) * $font-baseline}
+    h2, .h2 {font-size: $font-m * $xheight-header; line-height: ceil($font-m / $font-baseline) * $font-baseline}
+    h3, .h3 {font-size: $font-m * $xheight-header; line-height: ceil($font-s / $font-baseline) * $font-baseline}
+    h4, .h4 {font-size: $font-s * $xheight-header; line-height: ceil($font-s / $font-baseline) * $font-baseline}
+    h5, .h5 {font-size: $font-s * $xheight-header; line-height: ceil($font-s / $font-baseline) * $font-baseline}
+
+    @each $el in $type-header-els {
+        #{$el} {
+            padding-top: $font-baseline / 2;
+            margin-bottom: $font-baseline / 2;
+        }
+    }
+}
+
+
+// Lists
+// ============
+// Styling for list elements
+
+ul, ol, dl {
+    margin-left: $size-m;
+}
+
+
+// Links
+// ============
+// Link and hover colours
+
+a {color: $clr-link}
+a:hover {color: $clr-link-hover}
+
+
+// Blockquote
+// ============
+// Quote style
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+
+// Definition list
+// ============
+// DL style
+
+dt {
+	font-weight: bold;
+}

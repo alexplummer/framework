@@ -1,0 +1,139 @@
+extends components/_masthead
+
+block title
+	title Home
+
+block main
+	
+	section
+		.inner
+			.m-welcome
+				h3 Hello there!
+				p On this page are a basic sample of elements and some of the variables used in this framework:
+				
+				h4 Colour variables
+				ul.color-vars-main
+					li Primary
+					li Secondary
+					li Tertiary
+					li Highlight
+					li Shade
+
+				ul.color-vars-shades
+					li Light
+					li Lighter
+					li Dark
+					li Darker
+				
+				h4 Type variables
+				ul.font-vars
+					li Font Header
+					li Font Body
+					li Font Quote
+				
+			.m-elements
+				h1 Header 1
+				p
+					| A small paragraph to 
+					em emphasise
+					|  and show 
+					strong important
+					|  bits.  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+				img(src="img/media/sample_img.jpg", alt="")
+				ul
+					li This is a list item
+					li So is this - there could be more
+					li
+						| Make sure to style list items too:
+						ul
+							li Not forgetting child list items
+							li Not forgetting child list items
+							li Not forgetting child list items
+							li Not forgetting child list items
+					li A couple more
+					li top level list items
+				p
+					| Don't forget 
+					strong Ordered lists
+					| :
+				ol
+					li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					li
+						| Aliquam tincidunt mauris eu risus.
+						ol
+							li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+							li Aliquam tincidunt mauris eu risus.
+					li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					li Aliquam tincidunt mauris eu risus.
+				h2
+					| Header 2 
+				p
+					| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+				table
+					tbody
+						tr
+							th Table Heading
+							th Table Heading
+						tr
+							td table data
+							td table data
+						tr
+							td table data
+							td table data
+						tr
+							td table data
+							td table data
+						tr
+							td table data
+							td table data
+				h3
+					| Header 3					
+				form.pure-form.pure-form-aligned
+					fieldset
+						h5 Sample form
+						.pure-control-group
+							label(for='aligned-name') Username
+							input#aligned-name(type='text', placeholder='Username')
+							span.pure-form-message-inline This is a required field.
+						.pure-control-group
+							label(for='aligned-password') Password
+							input#aligned-password(type='password', placeholder='Password')
+						.pure-control-group
+							label(for='aligned-email') Email Address
+							input#aligned-email(type='email', placeholder='Email Address')
+						.pure-control-group
+							label(for='aligned-foo') Supercalifragilistic Label
+							input#aligned-foo(type='text', placeholder='Enter something here...')
+						.pure-controls
+							label.pure-checkbox(for='aligned-cb')
+								input#aligned-cb(type='checkbox')
+								|  I've read the terms and conditions
+							button.pure-button.pure-button-primary(type='submit') Submit
+				p
+					| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+				blockquote
+					p
+						| “Ooh - a blockquote! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”
+				h4
+					| Header 4
+				p
+					| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+				pre.
+				h5
+					| Header 5
+				p
+					| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+				dl
+					dt Definition list
+					dd
+						| Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						| aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+						| commodo consequat.
+					dt Lorem ipsum dolor sit amet
+					dd
+						| Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						| aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+						| commodo consequat.
+				br
+
+	include components/_footer

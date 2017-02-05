@@ -1,0 +1,13 @@
+// Layout
+// ============
+// Major layout rules to go here
+
+section, header, footer {
+    @extend %container;
+}
+.inner {
+    @extend %row;
+}
+.split {
+    @extend %col-sm-6;
+}
