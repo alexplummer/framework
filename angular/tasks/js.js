@@ -38,9 +38,9 @@ var browserReports = false;
 // ============
 // Inject SASS and JS modules
 
-gulp.task('inject-jsDeps', () => {
+gulp.task('inject-JSdeps', () => {
 	// Auto inject JS
-	return gulp.src(paths.dev+'/html/includes/_under.pug')
+	return gulp.src(paths.tmp+'/*.html')
 	.pipe(plugins.inject(gulp.src('**/*.js', {read: false, cwd:paths.tmp+'/script/'}), {
 		relative: true,
 		ignorePath: '../../../.tmp/',
@@ -50,7 +50,7 @@ gulp.task('inject-jsDeps', () => {
 			return '<script src="' + filepath + '"></script>';
 		}
 	}))
-	.pipe(gulp.dest(paths.dev+'/html/includes/'));
+	.pipe(gulp.dest(paths.tmp));
 });
 
 
@@ -96,7 +96,7 @@ gulp.task('js', () => {
 
 gulp.task('copy:scripts', cb => {
 	// JS hint
-	gulp.src(paths.tmp+'/script/script/**/*.js')
+	gulp.src(paths.tmp+'/script/**/*.js')
 	.pipe(plugins.jshint())
 	.pipe(plugins.if(browserReports, plugins.jshint.reporter('gulp-jshint-file-reporter', {
     	filename: 'reports/js/js.html'

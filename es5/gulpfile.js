@@ -3,8 +3,8 @@ Task reference:
 
 NAME |FUNCTION
 ==============
-gulp          | Cleans folders, builds site and starts localhost
-gulp prod     | Builds project to prod folder without localhost
+gulp          | Starts localhost for development
+gulp prod     | Builds production ready code and asssets
 gulp psi      | Builds then generates Google PSI reports
 gulp ngrok    | Builds then sets up localhost tunnel to outside world
 gulp report   | Runs further tests like accessibility checks
@@ -123,7 +123,7 @@ gulp.task('create-folders', cb => {
 // ============
 // Inject SASS and JS components
 
-gulp.task('inject-deps',['inject-jsDeps'], () => {
+gulp.task('inject-CSSdeps', () => {
 	// Auto inject SASS components
 	return gulp.src(paths.dev+'/style/style.scss')
 	.pipe(plugins.inject(gulp.src('components/**/*.scss', {read: false, cwd:paths.dev+'/style/'}), {
@@ -616,43 +616,50 @@ gulp.task('couchExcludes', () => {
 gulp.task('watch', () =>{
 	// SASS
 	plugins.watch([paths.dev+'/**/*.scss','!' + paths.dev+'/style/components/**/*.scss'], () => {gulp.start(gulpsync.sync([
-		'watch:message',['clean-reports','build-sass'],['lint-reports','clean:prod'],'build:prod'
+		'watch:messageSASS',['clean-reports','build-sass'],'lint-reports'
 	]));});
 	// COMPONENTS
 	plugins.watch(paths.dev+'/style/components/**/*.scss', () => {gulp.start(gulpsync.sync([
-		'inject-deps'
+		'watch:messageCOMPONENTS','inject-CSSdeps'
 	]));});
 	// HTML
 	plugins.watch(paths.dev+'/**/*.pug', () => {gulp.start(gulpsync.sync([
-		'watch:message','clean:html','html',['bower-inject','clean:prod'],'build:prod'
+		'watch:messageHTML','clean:html','html','bower-inject','watch:reload'
 	]));});
 	// JS
 	plugins.watch(paths.dev+'/**/*.js', () => {gulp.start(gulpsync.sync([
-		'watch:message','clean-reports',['copy:scripts','inject-deps'],['lint-reports','clean:prod'],'build:prod'
+		'watch:messageJS','clean-reports','js',['inject-JSdeps', 'copy:scripts'],'lint-reports'
 	]));});
 	// IMAGES
 	plugins.watch(paths.dev+'/img/**/*.*', () => {gulp.start(gulpsync.sync([
-		'watch:message',['copy:images','clean:prod'],'build:prod'
+		'watch:messageIMAGES','copy:images'
 	]));});
 	// FONTELLO
 	plugins.watch(paths.dev+'/font/config.json', () => {gulp.start(gulpsync.sync([
-		'watch:message',['fontello','clean-reports','build-sass'],['lint-reports','copy:fonts','clean:prod'],'build:prod'
+		'watch:messageFONTELLO',['fontello','clean-reports','build-sass'],['lint-reports','copy:fonts']
 	]));});
 	// BOWER
 	plugins.watch('bower_components/**/*', () => {gulp.start(gulpsync.sync([
-		'watch:message',['bower-inject','clean:prod'],'build:prod'
+		'watch:messageBOWER','bower-inject'
 	]));});
 	// GULP
 	plugins.watch('gulpfile.js', () => {gulp.start(gulpsync.sync([
-		'watch:messageG','watch:gulp'
+		'watch:messageGULP','watch:gulp'
 	]));});
 });
-gulp.task('watch:message', function reload() {
-	console.log('-* WATCH TRIGGERED *-');
-});
-gulp.task('watch:messageG', function reload() {
-	console.log('-* GULP FILE CHANGED, PLEASE RESTART *-');
-});
+
+// Watch messages
+gulp.task('watch:message', function reload() {console.log('-* WATCH TRIGGERED *-');});
+gulp.task('watch:messageSASS', function reload() {console.log('-* WATCH TRIGGERED: SASS *-');});
+gulp.task('watch:messageCOMPONENTS', function reload() {console.log('-* WATCH TRIGGERED: COMPONENTS *-');});
+gulp.task('watch:messageHTML', function reload() {console.log('-* WATCH TRIGGERED: HTML *-');});
+gulp.task('watch:messageJS', function reload() {console.log('-* WATCH TRIGGERED: JS *-');});
+gulp.task('watch:messageIMAGES', function reload() {console.log('-* WATCH TRIGGERED: IMAGES *-');});
+gulp.task('watch:messageFONTELLO', function reload() {console.log('-* WATCH TRIGGERED: FONTELLO *-');});
+gulp.task('watch:messageBOWER', function reload() {console.log('-* WATCH TRIGGERED: BOWER *-');});
+gulp.task('watch:messageGULP', function reload() {console.log('-* GULP FILE CHANGED, PLEASE RESTART *-');});
+
+// Watch tasks
 gulp.task('watch:reload', function reload() {
 	plugins.browserSync.reload();
 	console.log('(Watching)');
@@ -669,7 +676,7 @@ gulp.task('watch:gulp', () => {
 // BUILDS
 gulp.task('build:tmp', gulpsync.sync([
 	'clean:tmp','create-folders','js',
-	['bower-install','fontello','copy:fonts','inject-deps','clean-reports'],
+	['bower-install','fontello','copy:fonts','inject-CSSdeps', 'inject-JSdeps','clean-reports'],
 	['copy:scripts','copy:images','sprites'],
 	'build-sass',
 	['lint-reports','html'],
@@ -680,13 +687,13 @@ gulp.task('build:prod', gulpsync.sync([
 	'copy:prod',
 	'images',
 	//'couch',
-	'critical',
-	'optimise'
+	//'optimise'
 ]));
 
 // OPTIMISING TASKS
 gulp.task('optimise', gulpsync.sync([
 	'uncss',
+	'critical',
 	'htmlmin',
 	'gzip'
 ]));

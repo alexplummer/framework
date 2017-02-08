@@ -7,12 +7,13 @@ block main
 	
 	section
 		.inner
-			.m-welcome(ng-app="")
+			.m-welcome(ng-controller="ctrl")
 				h3 Hello {{name || '...'}}!
 				p This is the Angular version of my framework. On this page are a basic sample of elements and some of the variables used in this framework:
 					p 
 						| Enter your name:
 						input(type="text", ng-model="name")
+					p {{demo}}
 				
 				h4 Colour variables
 				ul.color-vars-main

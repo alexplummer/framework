@@ -38,7 +38,7 @@ var browserReports = false;
 // ============
 // Inject SASS and JS modules
 
-gulp.task('inject-jsDeps', () => {
+gulp.task('inject-JSdeps', () => {
 	// Auto inject JS
 	return gulp.src(paths.dev+'/html/includes/_under.pug')
 	.pipe(plugins.inject(gulp.src('**/*.js', {read: false, cwd:paths.tmp+'/script/'}), {
