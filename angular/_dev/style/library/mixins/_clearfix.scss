@@ -1,0 +1,12 @@
+
+// Clearfix
+// ============
+// Modify these files for each new site
+
+%clearfix, %cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

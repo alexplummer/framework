@@ -1,0 +1,53 @@
+
+// Setup
+// ============
+// General variables set here
+
+@import "setup/_setup";
+
+
+// Library
+// ============
+// Static framework variables and mixins
+
+/* csslint ignore:start */
+@import "library/_framework-typography";
+@import "library/_framework-tables";
+@import "library/_framework-forms";
+@import "library/_framework-buttons";
+@import "library/_normalize";
+@import "library/_sprites";
+@import "library/mixins/_clearfix";
+@import "library/mixins/_flexbox";
+@import "library/mixins/_grid";
+@import "library/mixins/_iconfix";
+/* csslint ignore:end */
+
+
+// Fontello
+// ============
+// Pulls in fontello CSS
+
+@import "fontello/fontello";
+
+
+// Global
+// ============
+// Common SASS shared between components
+
+@import "global/_vars";
+@import "global/_patterns";
+@import "global/_layout";
+@import "global/_typography";
+
+
+// Components
+// ============
+// User components, these are auto injected by Gulp when saved to folder
+
+/* inject:componentImports */
+@import "components/_m-elements.scss";
+@import "components/_m-footer.scss";
+@import "components/_m-masthead.scss";
+@import "components/_m-welcome.scss";
+/* endinjectComponent */

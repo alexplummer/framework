@@ -59,14 +59,24 @@ gulp.task('inject-jsDeps', () => {
 // Changes dependent on framework version
 
 gulp.task('js', () => {
-	// Package up ES6 modules
+	// Package up ES6 modules, Babel
 	return plugins.rollupStream({
 		entry: paths.dev+'/script/app.js',
 		sourceMap: true,
 		format: 'iife',
 		moduleName: 'app',
 		plugins: [
-			plugins.rollupPluginIncludepaths({paths:[paths.dev+'/script/']})
+			plugins.rollupPluginBabel({
+				exclude: ['node_modules/**','bower_components/**'],
+			    presets: [['es2015', { modules: false }],'stage-0'],
+				plugins: ['external-helpers']
+			}),
+			plugins.rollupPluginIncludepaths({
+				paths:[
+					paths.dev+'/script/',
+					'bower_components/'
+				] 
+			})
 		]
 	})
 	.on('error', plugins.util.log)
@@ -74,8 +84,6 @@ gulp.task('js', () => {
 	.pipe(plugins.vinylSourceStream('app.js', paths.dev+'/script/'))
 	.pipe(plugins.vinylBuffer())
 	.pipe(plugins.sourcemaps.init({loadMaps: true}))
-	// Convert ES6
-	.pipe(plugins.babel({presets: ['es2015']}))
 	// Write sourcemap
 	.pipe(plugins.sourcemaps.write('.'))
 	.pipe(gulp.dest(paths.tmp+'/script/'));

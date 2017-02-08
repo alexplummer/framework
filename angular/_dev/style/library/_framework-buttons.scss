@@ -1,0 +1,18 @@
+
+// Buttons
+// ============
+// Styling for buttons
+
+button, %button, %btn, input[type="submit"] {
+    background: $clr-link;
+    border-radius: 5px;
+    padding: $size-s $size-m;
+    color: $clr-primary-textoverlay;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+        background: lighten($clr-link, 10%);
+    }
+}
+
