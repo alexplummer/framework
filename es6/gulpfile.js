@@ -42,7 +42,7 @@ var browserReports = false;
 // ============
 // For when using FTP task, check FTP task first
 
-var ftpFolder = '/divorceandwellbeing-news';
+var ftpFolder = '/serverfolder';
 
 
 // Reqs
