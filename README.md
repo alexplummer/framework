@@ -69,24 +69,24 @@ These are the main tasks which can be run through Gulp, underneath are flags whi
 NAME | FUNCTION
 ==============
 
-gulp             | Starts localhost for development
-gulp offline     | Runs Gulp without making external calls
-gulp prod        | Builds production ready code and asssets
-gulp psi         | Builds then generates Google PSI reports
-gulp ngrok       | Builds then sets up localhost tunnel to outside world
-gulp report      | Runs further tests like accessibility checks
-gulp favicon     | Creates major icons into \_dev (setup in ./tasks)
-gulp deploy      | Builds then deploys via FTP (setup in ftp task)
-gulp couch       | Changes HTML to PHP then replaces certain inline paths
-gulp phonegap    | Builds, sends files to Phonegap and retrieves APK
-gulp phonegap-nb | As above but without main build
+* gulp             | Starts localhost for development
+* gulp offline     | Runs Gulp without making external calls
+* gulp prod        | Builds production ready code and asssets
+* gulp psi         | Builds then generates Google PSI reports
+* gulp ngrok       | Builds then sets up localhost tunnel to outside world
+* gulp report      | Runs further tests like accessibility checks
+* gulp favicon     | Creates major icons into \_dev (setup in ./tasks)
+* gulp deploy      | Builds then deploys via FTP (setup in ftp task)
+* gulp couch       | Changes HTML to PHP then replaces certain inline paths
+* gulp phonegap    | Builds, sends files to Phonegap and retrieves APK
+* gulp phonegap-nb | As above but without main build
 
 FLAGS
 ==============
 
---rev         | Add this to end one of above for versioned JS/CSS
---optimise    | Further optimises project, toggle tasks at bottom of this file
---phpext      | Replaces HTML file extentions with PHP, used for Couch CMS
+* --rev         | Add this to end one of above for versioned JS/CSS
+* --optimise    | Further optimises project, toggle tasks at bottom of this file
+* --phpext      | Replaces HTML file extentions with PHP, used for Couch CMS
 
 ### Main structure
 
@@ -149,60 +149,60 @@ The best place to usually start is in &#39;\_setup.scss&#39; as all of the main 
 
 The colour palette is based off of three main brand colours plus a couple of extras for shades and highlights if they are needed. Link colour is also specified here and impacts other parts of the framework such as buttons. For light and dark backgrounds and also the colour of most of your text there are light and dark variables. The full list of colour variables is as follows:
 
-$clr-primary:   #3C9ADA;
-$clr-secondary: #F3AF4B;
-$clr-tertiary:  #80007F;
-$clr-hlight:    #F6631E;
-$clr-shade:     #3F4747;
+* $clr-primary:   #3C9ADA;
+* $clr-secondary: #F3AF4B;
+* $clr-tertiary:  #80007F;
+* $clr-hlight:    #F6631E;
+* $clr-shade:     #3F4747;
 
-$clr-link: $clr-hlight;
-$clr-link-hover: lighten($clr-link, 10%);
+* $clr-link: $clr-hlight;
+* $clr-link-hover: lighten($clr-link, 10%);
 
-$clr-light:   #BED4D2;
-$clr-lighter: #D8E7E6;
-$clr-dark:    #666666;
-$clr-darker:  #333333;
+* $clr-light:   #BED4D2;
+* $clr-lighter: #D8E7E6;
+* $clr-dark:    #666666;
+* $clr-darker:  #333333;
 
-$clr-primary-textoverlay:   #FFFFFF;
-$clr-secondary-textoverlay: #FFFFFF;
-$clr-tertiary-textoverlay:  #FFFFFF;
-$clr-hlight-textoverlay:    #FFFFFF;
-$clr-shade-textoverlay:     #FFFFFF;
+* $clr-primary-textoverlay:   #FFFFFF;
+* $clr-secondary-textoverlay: #FFFFFF;
+* $clr-tertiary-textoverlay:  #FFFFFF;
+* $clr-hlight-textoverlay:    #FFFFFF;
+* $clr-shade-textoverlay:     #FFFFFF;
 
 ### Typography
 
 Add in your font stacks for header elements, body text and also quotes. Usually 3 font families is more than enough for a site. There are also variables to modify the size of type slightly if the xheights of header or body fonts are particularly out of sync with normal font sizes. The variables are as follows:
 
-$font-header: &#39;Montserrat&#39;, sans-serif;
-$font-body:   &#39;Open Sans&#39;, sans-serif;
-$font-quote:  &#39;Bevan&#39;, cursive;
+* $font-header: &#39;Montserrat&#39;, sans-serif;
+* $font-body:   &#39;Open Sans&#39;, sans-serif;
+* $font-quote:  &#39;Bevan&#39;, cursive;
 
-$xheight-header: 1;
-$xheight-body:   1;
+* $xheight-header: 1;
+* $xheight-body:   1;
 
 ### Scales
 
 The framework uses two scales with &#39;tshirt-size&#39; variables names, one for general distances such as margins and padding and another for font sizes. The font scale is based off of the classical font scale which is fairly well known and works quite well. It uses rems for measurements as these work responsively. The most important size is the body font size as this is usually used most commonly on a site. The default body font size in nearly every browser is 16px, so there are example pixel values based off of this in comments to give you an idea of perspective. The baseline is then used to create the size distances, which are used for margin and padding distances. All distances in your project should be in multiples of the baseline value, this creates a harmonious layout and rhythm to the page (trust me it will look sharp). You probably don&#39;t need to change any of these, but you could use a different scale if you wanted. The scales are as follows:
 
 // Font sizes
-$font-xxxl: /\* 96px \*/ 6      \* 1rem;
-$font-xxl:  /\* 48px \*/ 3      \* 1rem;
-$font-xl:   /\* 36px \*/ 2.25   \* 1rem;
-$font-l:    /\* 24px \*/ 1.5    \* 1rem;
-$font-m:    /\* 18px \*/ 1.125  \* 1rem;
-$font-s:    /\* 16px \*/ 1      \* 1rem;
-$font-xs:   /\* 12px \*/ 0.75   \* 1rem;
-$font-xxs:  /\*  9px \*/ 0.5625 \* 1rem;
+* $font-xxxl: /\* 96px \*/ 6      \* 1rem;
+* $font-xxl:  /\* 48px \*/ 3      \* 1rem;
+* $font-xl:   /\* 36px \*/ 2.25   \* 1rem;
+* $font-l:    /\* 24px \*/ 1.5    \* 1rem;
+* $font-m:    /\* 18px \*/ 1.125  \* 1rem;
+* $font-s:    /\* 16px \*/ 1      \* 1rem;
+* $font-xs:   /\* 12px \*/ 0.75   \* 1rem;
+* $font-xxs:  /\*  9px \*/ 0.5625 \* 1rem;
 
 // Baseline
-$font-size-body: $font-s;
-$font-baseline: $font-size-body \* 1.5;
+* $font-size-body: $font-s;
+* $font-baseline: $font-size-body \* 1.5;
 
 // Distances
-$size-xl: /\* 96px \*/ $font-baseline \* 4;
-$size-l:  /\* 48px \*/ $font-baseline \* 2;
-$size-m:  /\* 24px \*/ $font-baseline;
-$size-s:  /\* 12px \*/ $font-baseline / 2;
+* $size-xl: /\* 96px \*/ $font-baseline \* 4;
+* $size-l:  /\* 48px \*/ $font-baseline \* 2;
+* $size-m:  /\* 24px \*/ $font-baseline;
+* $size-s:  /\* 12px \*/ $font-baseline / 2;
 
 ### Grid
 
