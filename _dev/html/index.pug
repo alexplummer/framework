@@ -1,0 +1,37 @@
+
+//- Index
+//- ============
+//- The homepage for the site
+
+//- Extend head of document
+extends _includes/_head
+
+//- Page vars
+block pageVars
+	- var bodyClass = 'home'
+
+//- Includes
+include ../components/header-main/_header-main
+include ../components/content-left/_content-left
+include ../components/content-right/_content-right
+
+//- Page content
+block content
+
+	//- Header main
+	+header-main
+
+	main(role="main")
+
+		section
+
+			.inner 
+
+				//- Content left
+				+content-left
+
+				//- Content right
+				+content-right
+
+	//- Under document content
+	include _includes/_under

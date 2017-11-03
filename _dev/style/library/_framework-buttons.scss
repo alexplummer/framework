@@ -1,0 +1,21 @@
+
+// Buttons
+// ============
+// Styling for buttons
+
+button, %button, %btn, input[type="submit"] {
+    padding: $size-s $size-m;
+    border: 0;
+    border-radius: 5px;
+    background: $clr-link;
+    color: $clr-primary-textoverlay;
+    cursor: pointer;
+
+    &:hover {
+        background: lighten($clr-link, 10%);
+    }
+}
+// Weird normalize override
+html button {
+    font-family: $font-body;
+}

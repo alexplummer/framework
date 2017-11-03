@@ -1,0 +1,63 @@
+
+// Content left
+// ============
+// (Write description here)
+
+.content-left {
+    @extend %col-sm-6;
+    background: #F8F8F8;
+    padding: $size-m;
+    margin-bottom: $size-m;
+
+    .color-vars-main, .color-vars-shades {
+        width: 45%;
+        display: inline-block;
+        margin: 0 0 $size-l 0;
+        
+        li {
+            list-style: none;
+            position: relative;
+            line-height: $font-xxl;
+            padding-left: 70px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+        li:nth-of-type(1):before {
+            background: $clr-primary;
+        }
+        li:nth-of-type(2):before {
+            background: $clr-secondary;
+        }
+        li:nth-of-type(3):before {
+            background: $clr-tertiary;
+        }
+        li:nth-of-type(4):before {
+            background: $clr-hlight;
+        }
+        li:nth-of-type(5):before {
+            background: $clr-shade;
+        }
+    }
+    .color-vars-shades {
+        
+        li:nth-of-type(1):before {
+            background: $clr-light;
+        }
+        li:nth-of-type(2):before {
+            background: $clr-lighter;
+        }
+        li:nth-of-type(3):before {
+            background: $clr-dark;
+        }
+        li:nth-of-type(4):before {
+            background: $clr-darker;
+        }
+    }
+}

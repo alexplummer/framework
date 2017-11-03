@@ -1,0 +1,49 @@
+// Shadows
+// ============
+// Mixins for creating a variety of shadows
+
+@mixin shadow($type: small, $clr: rgba(0,0,0,0.2)) {
+    position: relative;
+
+    @if ($type == "small") {
+        box-shadow: 0 2px 6px 0px $clr;
+    }
+    @else if ($type == "large") {
+        box-shadow: 0 3px 15px 0px $clr;
+    }
+    @else if ($type == "squeezed") {
+        box-shadow: 0 10px 6px -6px $clr;
+    }
+    @if ($type == "curl-left" or $type == "curl-right" or $type == "curl-both") {
+
+        &:before, &:after {
+            position: absolute;
+            top: 80%;
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            max-width: 300px;
+            transform: rotate(-3deg);
+            background: $clr;
+            box-shadow: 0 15px 10px $clr;
+            content: "";
+            z-index: -1;
+        }
+        &:after {
+            right: 10px;
+            left: auto;
+        }
+    }
+    @if ($type == "curl-left") {
+        
+        &:after {
+            display: none;
+        }
+    }
+    @if ($type == "curl-right") {
+        
+        &:before {
+            display: none;
+        }
+    }   
+}

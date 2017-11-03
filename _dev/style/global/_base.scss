@@ -1,0 +1,14 @@
+
+// Base
+// ============
+// Global base styles
+
+body, html {
+    background: #fff;
+    overflow-x: hidden;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}

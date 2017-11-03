@@ -1,0 +1,20 @@
+
+//- Header main
+//- ============
+//- The main header content
+
+//- Includes
+include ../navbar/_navbar
+
+mixin header-main()
+    
+    .header-main
+
+        header(role="banner")
+
+            .inner
+
+                //- Navbar
+                +navbar
+
+                img(src="img/brand/logo-main.svg").svg.logo-main

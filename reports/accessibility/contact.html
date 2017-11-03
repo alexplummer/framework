@@ -1,0 +1,50 @@
+heading, issue, element, id, class, line, column, description 
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2|<title>Contact || Alex Plummer Portfolio</title>|9|4|Check that the title element describes the document.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="home" href="index.html">HOME</a>||home|41|30|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="work" href="work.html">WORK</a>||work|41|72|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="news" href="news.html">NEWS</a>||news|41|113|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="contact" href="contact.html">CONTACT</a>||contact|41|154|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+ERROR|WCAG2A.Principle3.Guideline3_2.3_2_2.H32.2|<form class="contact-form" action="post">
+            <input type="text" placeholder="Enter name here">
+            <input type="email" placeholder="Enter email here">
+            <textarea placeholder="Enter message here"></textarea>
+        </form>||contact-form|0|0|This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute "submit" or "image", or BUTTON elements with type "submit" or omitted/invalid.
+NOTICE|WCAG2A.Principle3.Guideline3_3.3_3_1.G83,G84,G85|<form class="contact-form" action="post">
+            <input type="text" placeholder="Enter name here">
+            <input type="email" placeholder="Enter email here">
+            <textarea placeholder="Enter message here"></textarea>
+        </form>||contact-form|0|0|If an input error is automatically detected in this form, check that the item(s) in error are identified and the error(s) are described to the user in text.
+NOTICE|WCAG2A.Principle3.Guideline3_3.3_3_2.G131,G89,G184,H90|<form class="contact-form" action="post">
+            <input type="text" placeholder="Enter name here">
+            <input type="email" placeholder="Enter email here">
+            <textarea placeholder="Enter message here"></textarea>
+        </form>||contact-form|0|0|Check that descriptive labels or instructions (including for required fields) are provided for user input in this form.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.InputText.Name|<input type="text" placeholder="Enter name here">|||0|0|This text input element does not have a name available to an accessibility API. Valid names are: label element, title attribute.
+ERROR|WCAG2A.Principle1.Guideline1_3.1_3_1.F68|<input type="text" placeholder="Enter name here">|||0|0|This form field should be labelled in some way. Use the label element (either with a "for" attribute or wrapped around the form field), or "title", "aria-label" or "aria-labelledby" attributes as appropriate.
+NOTICE|WCAG2A.Principle3.Guideline3_2.3_2_1.G107|<input type="text" placeholder="Enter name here">|||0|0|Check that a change of context does not occur when this input field receives focus.
+NOTICE|WCAG2A.Principle3.Guideline3_2.3_2_1.G107|<input type="email" placeholder="Enter email here">|||0|0|Check that a change of context does not occur when this input field receives focus.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name|<textarea placeholder="Enter message here"></textarea>|||58|12|This textarea element does not have a name available to an accessibility API. Valid names are: label element, title attribute.
+ERROR|WCAG2A.Principle1.Guideline1_3.1_3_1.F68|<textarea placeholder="Enter message here"></textarea>|||58|12|This form field should be labelled in some way. Use the label element (either with a "for" attribute or wrapped around the form field), or "title", "aria-label" or "aria-labelledby" attributes as appropriate.
+NOTICE|WCAG2A.Principle3.Guideline3_2.3_2_1.G107|<textarea placeholder="Enter message here"></textarea>|||58|12|Check that a change of context does not occur when this input field receives focus.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.A.NoContent|<a class="fb" href="#"></a>||fb|74|12|Anchor element found with a valid href attribute, but no link content has been supplied.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="fb" href="#"></a>||fb|74|12|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.A.NoContent|<a class="tw" href="#"></a>||tw|75|12|Anchor element found with a valid href attribute, but no link content has been supplied.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="tw" href="#"></a>||tw|75|12|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.A.NoContent|<a class="li" href="#"></a>||li|76|12|Anchor element found with a valid href attribute, but no link content has been supplied.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="li" href="#"></a>||li|76|12|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.A.NoContent|<a class="gh" href="#"></a>||gh|77|12|Anchor element found with a valid href attribute, but no link content has been supplied.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="gh" href="#"></a>||gh|77|12|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.A.NoContent|<a class="so" href="#"></a>||so|78|12|Anchor element found with a valid href attribute, but no link content has been supplied.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="so" href="#"></a>||so|78|12|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+ERROR|WCAG2A.Principle4.Guideline4_1.4_1_2.H91.A.NoContent|<a class="be" href="#"></a>||be|79|12|Anchor element found with a valid href attribute, but no link content has been supplied.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a class="be" href="#"></a>||be|79|12|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+WARNING|WCAG2A.Principle1.Guideline1_3.1_3_1.H48|<div class="legal">
+                <h2 class="logo-main">Alex Plummer</h2>
+                <p>© Copyright 2017</p><a href="legal.html">Legal</a><a href="credits.html">Credits</a>
+            </div>||legal|84|12|If this element contains a navigation section, it is recommended that it be marked up as a list.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a href="legal.html">Legal</a>|||86|39|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a href="credits.html">Credits</a>|||86|69|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a href="index.html">Home</a>|||88|17|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a href="work.html">Work</a>|||88|46|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a href="news.html">News</a>|||88|74|Check that the link text combined with programmatically determined link context identifies the purpose of the link.
+NOTICE|WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81|<a href="contact.html">Contact</a>|||88|102|Check that the link text combined with programmatically determined link context identifies the purpose of the link.

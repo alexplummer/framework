@@ -1,0 +1,19 @@
+
+// Navbar
+// ============
+// (Write description here)
+
+.navbar {
+    @extend %col-xs-12;
+
+    a {
+        color: #fff;
+        display: inline-block;
+        margin-right: $size-l;
+        text-decoration: none;
+        line-height: $size-l;
+    }
+    @media (max-width: $desktop-min) {
+        visibility: hidden;
+    }
+}

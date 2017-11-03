@@ -1,0 +1,103 @@
+
+// Colour palette
+// ============
+// Colour scheme variables
+
+$clr-primary:   #FCA504;
+$clr-secondary: #009DC9;
+$clr-tertiary:  #80007F;
+$clr-hlight:    #FFD68B;
+$clr-shade:     #CF8600;
+
+$clr-link: #CE0176;
+$clr-link-hover: lighten($clr-link, 10%);
+
+$clr-light:   #E6EAF0;
+$clr-lighter: #EEEEEE;
+$clr-dark:    #666666;
+$clr-darker:  #272729;
+
+$clr-primary-textoverlay:   $clr-darker;
+$clr-secondary-textoverlay: #FFFFFF;
+$clr-tertiary-textoverlay:  #FFFFFF;
+$clr-hlight-textoverlay:    $clr-darker;
+$clr-shade-textoverlay:     $clr-darker;
+
+
+// Font families
+// ============
+// Font family definitions
+
+$font-header: 'Sanchez', sans-serif;
+$font-body:   'Quicksand', sans-serif;
+$font-quote:  'Sanchez', cursive;
+
+// Modify irregular xheight fonts
+$xheight-header: 1;
+$xheight-body:   1;
+
+
+// Scales
+// ============
+// Scales used for type and spacing (/16)
+
+// Font sizes
+$font-xxxl: /* 96px */ 6      * 1rem;
+$font-xxl:  /* 48px */ 3      * 1rem;
+$font-xl:   /* 36px */ 2.25   * 1rem;
+$font-l:    /* 24px */ 1.5    * 1rem;
+$font-m:    /* 18px */ 1.125  * 1rem;
+$font-s:    /* 16px */ 1      * 1rem;
+$font-xs:   /* 12px */ 0.75   * 1rem;
+$font-xxs:  /*  9px */ 0.5625 * 1rem;
+
+// Baseline
+$font-size-body: $font-m;
+$font-baseline: $font-size-body * 1.5;
+
+// Distances
+$size-xl: /* 96px */  $font-baseline * 4;
+$size-l:  /* 48px */  $font-baseline * 2;
+$size-m:  /* 24px */  $font-baseline;
+$size-s:  /* 12px */  $font-baseline / 2;
+$size-xs: /*  6px */  $font-baseline / 4;
+
+
+// Grid
+// ============
+// Used to setup the flexbox grid
+
+// Breakpoints
+$mobile:  480px;
+$tablet:  768px;
+$laptop:  992px;
+$desktop: 1200px;
+$max:     1400px;
+
+// Breakpoints
+$mobile-min:  $mobile - 1px;
+$tablet-min:  $tablet - 1px;
+$laptop-min:  $laptop - 1px;
+$desktop-min: $desktop - 1px;
+
+// Containers
+$container-tablet:  100%;
+$container-laptop:  100%;
+$container-desktop: 100%;
+$container-max: 1376px;
+
+// Columns & margins
+$grid-columns: 12;
+$gutter-width: $size-l;
+$outer-margin: $size-m;
+
+
+// Z-index
+// ============
+// Structured Z-index
+
+$z-max: 1000;
+$z-l: 100;
+$z-m: 50;
+$z-s: 10;
+$z-min: 0;

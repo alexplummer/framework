@@ -1,0 +1,12 @@
+
+// Content right
+// ============
+// (Write description here)
+
+.content-right {
+    @extend %col-sm-6;
+
+    h1 {
+        @extend .animated;
+    }
+}

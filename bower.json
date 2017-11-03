@@ -1,0 +1,28 @@
+{
+  "name": "dev",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [],
+  "description": "",
+  "main": "bower.json",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "animate-sass": "^0.6.6"
+  },
+  "overrides": {
+    "ally.js": {
+      "main": [
+        "dist/ally.min.js"
+      ]
+    }
+  }
+}

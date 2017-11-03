@@ -1,0 +1,79 @@
+
+//- Document head
+//- ============
+//- The heading for all pages
+
+//- Includes
+include ../_vars/_global-vars
+block pageVars
+
+doctype html
+html(lang="en")
+head
+
+	//- Primary meta
+	meta(charset="utf-8")
+	meta(http-equiv="x-ua-compatible" content="ie=edge")
+	meta(name="viewport" content="width=device-width, initial-scale = 1.0")
+	title #{siteName}
+	link(rel="author" href="humans.txt")
+	link(rel="canonical" href="#")
+
+	//- DNS Prefetch
+	link(rel="dns-prefetch" href="http://fonts.googleapis.com/")
+
+	//- Meta, OG, Twitter, Apple
+	meta(name="description" content="#{siteDescription}")
+	meta(property="article:author" content="#{siteAuthor}")
+	meta(name="robots" content="index, follow")
+	meta(name="theme-color" content="#{brand}")
+	meta(property="fb:app_id" content="123456789")
+	meta(property="og:url" content="#{siteURL}")
+	meta(property="og:type" content="website")
+	meta(property="og:title" content="#{siteName}")
+	meta(property="og:description" content="#{siteDescription}")
+	meta(property="og:site_name" content="#{siteName}")
+	meta(property="og:locale" content="en_UK")
+	meta(property="og:image" content="#{shareImage}")
+	meta(name="twitter:image" content="#{shareImage}")
+	meta(name="twitter:card" content="summary")
+	meta(name="twitter:site" content="@site_account")
+	meta(name="twitter:creator" content="@individual_account")
+	meta(name="twitter:url" content="#{siteURL}")
+	meta(name="twitter:title" content="#{siteName}")
+	meta(name="twitter:description" content="#{siteDescription}")
+	meta(name="apple-mobile-web-app-title" content="#{siteName}")
+	meta(name="apple-mobile-web-app-capable" content="yes")
+	meta(name="apple-mobile-web-app-status-bar-style" content="#{brand}")
+	meta(name="apple-mobile-web-app-title" content="#{siteName}")
+	meta(name="application-name" content="#{siteName}")
+	meta(name="msapplication-TileColor" content="#{brand}")
+
+	//- CSS
+	<!-- build:css style/style.css -->
+	<!-- bower:css -->
+	<!-- endbower -->
+	link(rel="stylesheet" href="style/style.css")
+	<!-- endbuild -->
+
+	//- Favicons (create with favicon Gulp task)
+	link(rel="apple-touch-icon" sizes="76x76" href="img/brand/favicons/apple-touch-icon.png?v=6")
+	link(rel="icon" type="image/png" href="img/brand/favicons/favicon-32x32.png?v=6" sizes="32x32")
+	link(rel="icon" type="image/png" href="img/brand/favicons/favicon-16x16.png?v=6" sizes="16x16")
+	link(rel="manifest" href="img/brand/favicons/manifest.json?v=6")
+	link(rel="mask-icon" href="img/brand/favicons/safari-pinned-tab.svg?v=6" color="#{brand}")
+	link(rel="shortcut icon" href="img/brand/favicons/favicon.ico?v=6")
+	meta(name="msapplication-config" content="img/brand/favicons/browserconfig.xml?v=6")
+	
+	//- Google Analytics
+		<script async src="https://www.googletagmanager.com/gtag/js"></script>
+		<script>
+		| window.dataLayer = window.dataLayer || [];
+		| function gtag(){dataLayer.push(arguments);}
+		| gtag('js', new Date());
+		| gtag('config', 'UA-ID');
+		</script>
+		</head>
+
+body(class=(bodyClass || ""))
+	block content

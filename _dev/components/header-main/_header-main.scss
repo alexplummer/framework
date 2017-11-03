@@ -1,0 +1,24 @@
+
+// Header main
+// ============
+// (Write description here)
+
+.header-main {
+    position: relative;
+    background: $clr-darker;
+    padding: 0 $size-s;
+    margin-bottom: $size-m;
+
+    .logo-main  {
+        position: absolute;
+        left: 50%;
+        top: $size-s;
+        transform: translateX(-50%);
+        height: 50px;
+
+        * {
+            stroke: $clr-primary;
+            fill: $clr-darker;
+        }
+    }
+}

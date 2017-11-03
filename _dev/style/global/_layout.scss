@@ -1,0 +1,11 @@
+
+// Layout
+// ============
+// Major layout rules to go here
+
+section, body > header, .header-main header, body > footer {
+    @extend %container;
+}
+.inner {
+    @extend %row;
+}
