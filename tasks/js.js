@@ -64,10 +64,10 @@ gulp.task('js', () => {
 
 	// Package up ES6 moduleswith stream
 	const stream = plugins.rollupStream({
-		entry: paths.dev + '/script/app.js',
-		sourceMap: true,
+		input: paths.dev + '/script/app.js',
+		sourcemap: true,
 		format: 'iife',
-		moduleName: 'app',
+		name: 'app',
 		plugins: [
 			plugins.rollupPluginIncludepaths({ paths: [paths.dev + '/script/'] }),
 		]
