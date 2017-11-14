@@ -32,10 +32,10 @@ let gulp = require('gulp'),
 // ============
 // Builds a list of directories in components
 
-let oldDirs = [];
+let oldComponents = [];
 
 gulp.task('component-directories', (cb) => {
-    oldDirs = fs.readdirSync((paths.dev + '/components/'));
+    oldComponents = JSON.parse(fs.readFileSync('_dev/components/component-list.json')).components;
     cb();
 });
 
@@ -46,71 +46,67 @@ gulp.task('component-directories', (cb) => {
 
 gulp.task('create-component', (cb) => {
 
-    let newDirs = fs.readdirSync((paths.dev + '/components/'));
-    let oldArray = Object.keys(oldDirs).map(function (key) { return oldDirs[key]; });
-    let newArray = Object.keys(newDirs).map(function (key) { return newDirs[key]; });
-    let dsIndex = newArray.indexOf('.DS_Store');
-    
-    if (dsIndex > -1) {
-        newArray.splice(dsIndex, 1);
+    let newComponents = JSON.parse(fs.readFileSync('_dev/components/component-list.json')).components;
+
+    let difference = function difference(arr1, arr2, val1, val2) {
+        let diff = [];
+
+        arr1.forEach((arr1Val) => {
+            let checkedMatch = true;
+
+            arr2.forEach((arr2Val) => {
+                if (arr2Val[val1] === arr1Val[val1]) checkedMatch = false;
+            });
+
+            if (checkedMatch === true) diff.push([arr1Val[val1], arr1Val[val2]]);
+        });
+
+        return diff;
     }
 
-    difference(newArray, oldArray);
+    let newComponentsDiff = difference(newComponents, oldComponents, 'name', 'description');
 
-    function difference(a1, a2) {
-        let result = [];
+    class createComponent {
 
-        for (let i = 0; i < a1.length; i++) {
-            if (a2.indexOf(a1[i]) === -1) {
-                result.push(a1[i]);
-            }
+        constructor(componentName, componentDesc) {
+            let properName;
+            this.properName = componentName;
+            this.componentName = componentName.toLowerCase().split(' ').join('-').toString();
+            this.componentDesc = componentDesc.toString();
         }
-        if (result.length > 0 
-        && result !== 'untitled folder'
-        && result !== 'New folder'
-        ){
-            console.log('New component created: ' + result);
-            oldDirs = newDirs;
-            createComponent(result);
-        }
-    }
 
-    function createComponent(componentName) {
+        buildComponent() {
 
-        componentName = componentName.toString();
-        let properName = componentName.replace('-', ' ');
-        properName = properName.charAt(0).toUpperCase() + properName.slice(1);
+            if (this.componentName !== 'untitled folder' && this.componentName !== 'New folder') {
 
-        if (componentName !== 'untitled folder' && componentName !== 'New folder') {
-
-            let pugContents =
-                `
-//- ${properName}
+                let pugContents =
+                    `
+//- ${this.properName}
 //- ============
-//- (Write description here)
+//- ${this.componentDesc}
 
 //- Includes
 
-mixin ${componentName}()
+mixin ${this.componentName}()
     
-    .${componentName}
+    .${this.componentName}
 `;
 
-            let sassContents =
-                `
-// ${properName}
+                let sassContents =
+                    `
+// ${this.properName}
 // ============
-// (Write description here)
+// ${this.componentDesc}
 
-.${componentName} {
+.${this.componentName} {
 
 }`;
 
-    let jsContents =
-                `
-// ${properName}
+                let jsContents =
+                    `
+// ${this.properName}
 // ============
-// (Write description here)
+// ${this.componentDesc}
 
 // Imports
 import { cl } from '../script/library/cl';
@@ -120,14 +116,29 @@ export { exampleFunction };
 
 // exampleFunction
 const exampleFunction = function exampleFunction() {
-    cl('${properName} exampleFunction loaded');
+    cl('${this.properName} exampleFunction loaded');
 }`;
+                let makeDirectory = new Promise((resolve, reject) => {
+                    plugins.mkdirp(paths.dev + '/components/' + this.componentName), resolve();
+                });
 
-            fs.writeFile(paths.dev + '/components/' + componentName + '/_' + componentName + '.pug', pugContents);
-            fs.writeFile(paths.dev + '/components/' + componentName + '/_' + componentName + '.scss', sassContents);
-            fs.writeFile(paths.dev + '/components/' + componentName + '/' + componentName + '.js', jsContents);
+                makeDirectory.then(()=>{
+                    fs.writeFile(paths.dev + '/components/' + this.componentName + '/_' + this.componentName + '.pug', pugContents);
+                    fs.writeFile(paths.dev + '/components/' + this.componentName + '/_' + this.componentName + '.scss', sassContents);
+                    fs.writeFile(paths.dev + '/components/' + this.componentName + '/' + this.componentName + '.js', jsContents);
+                });
+            }
         }
     }
+
+    newComponentsDiff.forEach((thisComponent) => {
+
+        let thisName = thisComponent[0];
+        let thisDesc = thisComponent[1];
+
+        let newCreateComponent = new createComponent(thisName, thisDesc);
+        newCreateComponent.buildComponent();
+    });
 
     cb();
 });

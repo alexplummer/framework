@@ -34,17 +34,6 @@ var app = function () {
         return false;
     };
 
-    // Content right
-    // ============
-    // (Write description here)
-
-    // Imports
-    // animateHeader
-    var animateHeader = function animateHeader() {
-
-        document.querySelector('h1').classList.add('swing');
-    };
-
     // App
     // ============
     // All of JS is organised from here
@@ -60,7 +49,7 @@ var app = function () {
 
         // Home specific fns
         if (hasClass('body', 'home')) {
-            animateHeader();
+            //animateHeader();
         }
     });
 

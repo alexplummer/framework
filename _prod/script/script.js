@@ -1,0 +1,2 @@
+"use strict";var app=function(){var e=function(e,t){var n=void 0;return document.getElementsByTagName(e)[0]?n=document.getElementsByTagName(e)[0]:document.querySelector(e)&&(n=document.querySelector(e)),!!n.classList.contains(t)},t=function(){document.querySelector("h1").classList.add("swing")},n=n||{};return function(e){var t=setInterval(function(){document&&"complete"===document.readyState&&(clearInterval(t),e())},10)}(function(){e("body","home")&&t()}),n}();
+//# sourceMappingURL=script.js.map

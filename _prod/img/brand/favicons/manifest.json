@@ -1,0 +1,13 @@
+{
+    "name": "app_name",
+    "icons": [
+        {
+            "src": "img/brand/favicons/android-chrome-48x48.png?v=6",
+            "sizes": "48x48",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

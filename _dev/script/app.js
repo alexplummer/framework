@@ -7,7 +7,7 @@
 import { cl } from 'library/cl';
 import { onReady } from 'library/onReady';
 import { hasClass } from 'library/checkClass';
-import { animateHeader } from '../components/content-right/content-right';
+//import { animateHeader } from '../components/content-right/content-right';
 
 // Exports
 export default globals;
@@ -22,6 +22,6 @@ onReady(() => {
 
     // Home specific fns
     if (hasClass('body', 'home')) {   
-        animateHeader();
+        //animateHeader();
     }
 });

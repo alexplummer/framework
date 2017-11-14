@@ -681,19 +681,19 @@ gulp.task('depcheck', plugins.depcheck({
 
 gulp.task('watch', () => {
 	// NEW COMPONENT
-	plugins.watch([paths.dev + '/components/', '!'+paths.dev + '/components/**/*.scss'], () => {
+	plugins.watch([paths.dev + '/components/component-list.json'], () => {
 		gulp.start(gulpsync.sync([
 			'watch:messageNEW', 'create-component'
 		]));
 	});
 	// SASS
-	plugins.watch([paths.dev + '/**/*.scss'], () => {
+	plugins.watch([paths.dev + '/**/*.scss', '!'+paths.dev + '/components/component-list.json'], () => {
 		gulp.start(gulpsync.sync([
 			'watch:messageSASS', [/*'clean-reports',*/ 'build-sass']
 		]));
 	});
 	// COMPONENTS
-	plugins.watch([paths.dev + '/components/**/*.*', '!'+paths.dev + '/components/**/*.scss'], () => {
+	plugins.watch([paths.dev + '/components/**/*.*', '!'+paths.dev + '/components/**/*.scss', '!'+paths.dev + '/components/component-list.json'], () => {
 		gulp.start(gulpsync.sync([
 			'watch:messageCOMPONENTS', 'inject-CSSdeps'
 		]));
@@ -735,7 +735,7 @@ gulp.task('watch', () => {
 		]));
 	});
 	// GULP
-	plugins.watch('gulpfile.js', () => {
+	plugins.watch(['gulpfile.js', 'tasks/*.*'], () => {
 		gulp.start(gulpsync.sync([
 			'watch:messageGULP', 'watch:gulp'
 		]));
