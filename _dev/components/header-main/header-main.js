@@ -4,12 +4,13 @@
 // (Write description here)
 
 // Imports
+import globals from '../script/app';
 import { cl } from '../script/library/cl';
-
-// Exports
-export { exampleFunction };
 
 // exampleFunction
 const exampleFunction = function exampleFunction() {
     cl('Header main exampleFunction loaded');
 }
+
+// Exports
+export { exampleFunction };

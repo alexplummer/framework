@@ -111,13 +111,14 @@ mixin ${this.componentName}()
 // Imports
 import { cl } from '../script/library/cl';
 
-// Exports
-export { exampleFunction };
-
 // exampleFunction
 const exampleFunction = function exampleFunction() {
     cl('${this.properName} exampleFunction loaded');
-}`;
+}
+
+// Exports
+export { exampleFunction };`;
+
                 let makeDirectory = new Promise((resolve, reject) => {
                     plugins.mkdirp(paths.dev + '/components/' + this.componentName), resolve();
                 });

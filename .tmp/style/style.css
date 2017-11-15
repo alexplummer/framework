@@ -1841,8 +1841,8 @@ body {
 
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello.eot?2495436");
-  src: url("../font/fontello.eot?2495436#iefix") format("embedded-opentype"), url("../font/fontello.woff2?2495436") format("woff2"), url("../font/fontello.woff?2495436") format("woff"), url("../font/fontello.ttf?2495436") format("truetype"), url("../font/fontello.svg?2495436#fontello") format("svg");
+  src: url("../font/fontello.eot?90173792");
+  src: url("../font/fontello.eot?90173792#iefix") format("embedded-opentype"), url("../font/fontello.woff2?90173792") format("woff2"), url("../font/fontello.woff?90173792") format("woff"), url("../font/fontello.ttf?90173792") format("truetype"), url("../font/fontello.svg?90173792#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1852,7 +1852,7 @@ body {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?2495436#fontello') format('svg');
+    src: url('../font/fontello.svg?90173792#fontello') format('svg');
   }
 }
 */
@@ -1976,6 +1976,17 @@ body, html {
   .content-left .color-vars-shades li:nth-of-type(4):before {
     background: #272729; }
 
+.navbar a {
+  color: #fff;
+  display: inline-block;
+  margin-right: 3.375rem;
+  text-decoration: none;
+  line-height: 3.375rem; }
+
+@media (max-width: 1199px) {
+  .navbar {
+    visibility: hidden; } }
+
 .header-main {
   position: relative;
   background: #272729;
@@ -1990,17 +2001,6 @@ body, html {
     .header-main .logo-main * {
       stroke: #FCA504;
       fill: #272729; }
-
-.navbar a {
-  color: #fff;
-  display: inline-block;
-  margin-right: 3.375rem;
-  text-decoration: none;
-  line-height: 3.375rem; }
-
-@media (max-width: 1199px) {
-  .navbar {
-    visibility: hidden; } }
 
 /* endinjectComponent */
 

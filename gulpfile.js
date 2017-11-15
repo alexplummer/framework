@@ -623,7 +623,7 @@ gulp.task('sprites', () => {
 			cssName: '_sprites.scss'
 		}));
 	spriteData.img.pipe(gulp.dest(paths.dev + '/img/'));
-	spriteData.css.pipe(gulp.dest(paths.dev + '/style/library'));
+	spriteData.css.pipe(gulp.dest(paths.dev + '/style/global'));
 });
 
 

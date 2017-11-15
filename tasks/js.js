@@ -93,7 +93,8 @@ gulp.task('js', () => {
 		.pipe(plugins.babel({ presets: ['es2015'] }))
 		// Write sourcemap
 		.pipe(plugins.sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.tmp + '/script/'));
+		.pipe(gulp.dest(paths.tmp + '/script/'))
+		.pipe(plugins.browserSync.stream());
 });
 
 

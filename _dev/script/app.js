@@ -7,21 +7,21 @@
 import { cl } from 'library/cl';
 import { onReady } from 'library/onReady';
 import { hasClass } from 'library/checkClass';
-//import { animateHeader } from '../components/content-right/content-right';
-
-// Exports
-export default globals;
+import { animateHeader } from '../components/content-right/content-right';
 
 // Global object
-let globals = globals || {};
+let globals = globals || {'test':true};
 
-// Run App fns on ready
 onReady(() => {
 
     // Global fns
+    cl('Page ready');
 
     // Home specific fns
     if (hasClass('body', 'home')) {   
-        //animateHeader();
+        animateHeader();
     }
 });
+
+// Exports
+export default globals;
