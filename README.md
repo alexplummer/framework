@@ -1,3 +1,5 @@
+![alt text](http://alexplummer.com/img/toolbox.png)
+
 # The Feature Creep Frontend Framework
 
 ## Intro
@@ -67,7 +69,7 @@ Once you have the above installed you can then grab the necessary packages by op
 
 These are the main tasks which can be run through Gulp, underneath are flags which can be added to the task to perform certain actions. Mostly you will just type &#39;gulp&#39; into the console to get started. Once you are ready for your production code you will use &#39;gulp prod&#39; which builds it out to the \_prod folder ready for use.
 
-NAME | FUNCTION
+### NAME | FUNCTION
 ==============
 
 * gulp             | Starts localhost for development
@@ -82,7 +84,7 @@ NAME | FUNCTION
 * gulp phonegap    | Builds, sends files to Phonegap and retrieves APK
 * gulp phonegap-nb | As above but without main build
 
-FLAGS
+### FLAGS
 ==============
 
 * --rev         | Add this to end one of above for versioned JS/CSS
