@@ -2,9 +2,7 @@
 
 # The Feature Creep Frontend Framework
 
-## Intro
-
-### Background
+## Background
 
 Welcome to the personal framework of Alex Plummer. I have been using and adding to this framework over the last 5 years or so, during that time a lot has made it in as I worked on a variety of projects. The main principles I have worked towards are those of automation and speed. I also really like the idea of modular design and CSS, so there is a strong emphasis on type and size scales and vars. This framework has been made for frontend developers, Feel free to take and use as you please!
 
@@ -35,11 +33,11 @@ The framework has support for a fairly full stack of tech, although the emphasis
 - Couch CMS for client authoring and backend tasks
 - Phonegap Build API integration for mobile development
 
-### TLDR
+## TLDR
 
 For a really quick rundown - with Gulp up and running and the packages installed use &#39;gulp&#39; to trigger localhost. Once running add new components to component-list.json and they will be automatically built out into a new folder. When you are ready &#39;gulp prod&#39; will build out your project to the \_prod folder.
 
-### Prerequisites
+## Prerequisites
 
 You will need the following to get started with the framework:
 
@@ -61,11 +59,11 @@ Depending on your project you may need the following:
 - Couch CMS installed on your server
 - An account with Phonegap Build for mobile apps
 
-### Setup
+## Setup
 
 Once you have the above installed you can then grab the necessary packages by opening a console at the root and running either &#39;yarn install&#39; or &#39;npm install&#39; depending on the package manager you are using. This will take some time to run as there are a lot of packages! After that has finished you should be good to go.
 
-### Usage
+## Usage
 
 These are the main tasks which can be run through Gulp, underneath are flags which can be added to the task to perform certain actions. Mostly you will just type &#39;gulp&#39; into the console to get started. Once you are ready for your production code you will use &#39;gulp prod&#39; which builds it out to the \_prod folder ready for use.
 
@@ -91,7 +89,7 @@ These are the main tasks which can be run through Gulp, underneath are flags whi
 * --optimise    | Further optimises project, toggle tasks at bottom of this file
 * --phpext      | Replaces HTML file extentions with PHP, used for Couch CMS
 
-### Main structure
+## Main structure
 
 The framework is organised into the following main folders:
 
@@ -107,7 +105,7 @@ This is a hidden folder which everything holds compiled assets, you don&#39;t ne
 
 All the compiled assets in \_tmp are optimised and organised into here for production.
 
-### Development structure
+## Development structure
 
 The \_dev folder contains all the subfolders for things like HTML and CSS, they are as follows:
 
@@ -164,7 +162,7 @@ This is where the images for your project live. Most images go in the root of th
 
 Fonts are kept in the root of this folder, there is also a Fontello subfolder. Replace the config.json in the fontello folder with your own Fontello config and the correct assets will be downloaded and automatically injected into the project (this can break so restart Gulp if they aren&#39;t immediately obvious)
 
-### Getting started
+## Getting started
 
 The best place to usually start is in &#39;\_setup.scss&#39; as all of the main variables are here. Change the colour variables as are needed, you won&#39;t usually need all of these, the variety of variables are there so you can use those you need consistently. You can also add the font stacks you want to use in here. The values you enter here are used within other stylesheets which are in the &#39;library&#39; folder to generate the framework styles.
 
@@ -229,9 +227,9 @@ The framework uses two scales with &#39;tshirt-size&#39; variables names, one fo
 
 ### Grid
 
-The framework uses the flexbox grid ( [http://flexboxgrid.com](http://flexboxgrid.com)) however I have shifted it over to use Sass placeholders (use &#39;%col-md-6&#39; for example) as these don&#39;t get compiled unless used. You can setup the vars for the flexbox grid if you like, but you most likely won&#39;t need to change them
+The framework includes the flexbox grid ( [http://flexboxgrid.com](http://flexboxgrid.com)) which is good for creating quick responsive grids or you could just use the standard CSS Grid with some media queries instead. The flexbox grid is configured with Sass placeholders (use &#39;%col-md-6&#39; for example) as these don&#39;t get compiled unless used. You can setup the vars for the flexbox grid if you like, but you most likely won&#39;t need to change them
 
-### Framework components
+## Framework components
 
 There are some components already baked into the framework, these are controlled manually in &#39;style.css&#39;. Here are a few of them:
 
@@ -315,7 +313,7 @@ There is functionality to print off all the CSS, HTML and JS lints to a webpage 
 
 There is an inline SVG task which will inline all of your SVGs. This way they can be targeted through CSS and you don’t have to deal with loads of muddy code by inserting them yourself. To use this add a class .svg in your Pug to any SVG you want to inline.
 
-### CouchCMS
+## CouchCMS
 
 Uncomment the couch task from the prod build at the bottom of the Gulpfile to enable the CouchCMS tasks to run such as conversion to PHP and renaming of assets.
 This is not totally straightforward but I have written this handy guide to give you a headstart: http://alexplummer.com/article/tutorials/using-couch-cms-with-pug.html
