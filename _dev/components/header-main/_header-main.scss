@@ -9,16 +9,27 @@
     padding: 0 $size-s;
     margin-bottom: $size-m;
 
-    .logo-main  {
+    .logo  {
         position: absolute;
         left: 50%;
         top: $size-s;
         transform: translateX(-50%);
-        height: 50px;
 
-        * {
-            stroke: $clr-primary;
-            fill: $clr-darker;
+        svg {
+            height: 50px;
+            float: left;
+
+            * {
+                stroke: 0;
+                fill: $clr-primary;
+            }
+        }
+        h1 {
+            @extend .h2;
+            color: $clr-primary;
+            float: left;
+            padding-top: 0;
+            margin-left: $size-m;
         }
     }
 }

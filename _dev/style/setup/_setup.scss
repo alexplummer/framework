@@ -74,11 +74,10 @@ $laptop:  992px;
 $desktop: 1200px;
 $max:     1400px;
 
-// Breakpoints
-$mobile-min:  $mobile - 1px;
-$tablet-min:  $tablet - 1px;
-$laptop-min:  $laptop - 1px;
-$desktop-min: $desktop - 1px;
+// Breakpoints max
+$mobile-max:  $tablet - 1px;
+$tablet-max:  $laptop - 1px;
+$laptop-max: $desktop - 1px;
 
 // Containers
 $container-tablet:  100%;

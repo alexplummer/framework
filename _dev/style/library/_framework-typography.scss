@@ -140,7 +140,7 @@ h4, .h4, h5, .h5 {
 body {
 
 	// Tablet
-	@media (max-width: $laptop-min) {
+	@media (max-width: $tablet-max) {
 
 		h1, .h1 {font-size: $font-xl * $xheight-header; line-height: ceil($font-xl / $font-baseline) * $font-baseline}
 		h2, .h2 {font-size: $font-l  * $xheight-header; line-height: ceil($font-l  / $font-baseline) * $font-baseline}
@@ -156,7 +156,7 @@ body {
 		}
 	}
 	// Mobile
-	@media (max-width: $tablet-min) {
+	@media (max-width: $mobile-max) {
 
 		h1, .h1 {font-size: $font-l * $xheight-header; line-height: ceil($font-l / $font-baseline) * $font-baseline}
 		h2, .h2 {font-size: $font-l * $xheight-header; line-height: ceil($font-l / $font-baseline) * $font-baseline}

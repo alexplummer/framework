@@ -13,7 +13,7 @@
         text-decoration: none;
         line-height: $size-l;
     }
-    @media (max-width: $desktop-min) {
+    @media (max-width: $tablet-max) {
         visibility: hidden;
     }
 }
