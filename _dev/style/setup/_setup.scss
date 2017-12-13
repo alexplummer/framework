@@ -63,6 +63,46 @@ $size-s:  /* 12px */  $font-baseline / 2;
 $size-xs: /*  6px */  $font-baseline / 4;
 
 
+// Heading sizes
+// ============
+// Sizes for headings based on the font scale
+
+// Desktop
+$font-h1-desktop: $font-xxl;
+$font-h2-desktop: $font-xl;
+$font-h3-desktop: $font-l;
+$font-h4-desktop: $font-l;
+$font-h5-desktop: $font-m;
+
+// Tablet
+$font-h1-tablet: $font-xl;
+$font-h2-tablet: $font-l;
+$font-h3-tablet: $font-l;
+$font-h4-tablet: $font-m;
+$font-h5-tablet: $font-s;
+
+// Mobile
+$font-h1-mobile: $font-l;
+$font-h2-mobile: $font-l;
+$font-h3-mobile: $font-l;
+$font-h4-mobile: $font-m;
+$font-h5-mobile: $font-s;
+
+
+// Body sizes
+// ============
+// Sizes for non-header elements
+
+// Desktop
+$font-body-desktop: $font-size-body;
+
+// Tablet
+$font-body-tablet: $font-size-body;
+
+// Mobile
+$font-body-mobile: $font-size-body;
+
+
 // Grid
 // ============
 // Used to setup the flexbox grid

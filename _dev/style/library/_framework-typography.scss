@@ -52,15 +52,15 @@ blockquote {
 // ============
 // Font sizes for headings and other elements
 
-h1, .h1 {font-size: $font-xxl * $xheight-header}
-h2, .h2 {font-size: $font-xl  * $xheight-header}
-h3, .h3 {font-size: $font-l   * $xheight-header}
-h4, .h4 {font-size: $font-l   * $xheight-header}
-h5, .h5 {font-size: $font-m   * $xheight-header}
+h1, .h1 {font-size: $font-h1-desktop * $xheight-header}
+h2, .h2 {font-size: $font-h2-desktop * $xheight-header}
+h3, .h3 {font-size: $font-h3-desktop * $xheight-header}
+h4, .h4 {font-size: $font-h4-desktop * $xheight-header}
+h5, .h5 {font-size: $font-h5-desktop * $xheight-header}
 
 @each $el in $type-normal-els {
 	#{$el} {
-		font-size: $font-size-body * $xheight-body;
+		font-size: $font-body-desktop * $xheight-body;
 	}
 }
 
@@ -69,21 +69,16 @@ h5, .h5 {font-size: $font-m   * $xheight-header}
 // ============
 // Lineheights for headings and other elements
 
-h1, .h1 {line-height: ceil($font-xxl / $font-baseline) * $font-baseline}
-h2, .h2 {line-height: ceil($font-xl  / $font-baseline) * $font-baseline}
-h3, .h3 {line-height: ceil($font-l   / $font-baseline) * $font-baseline}
-h4, .h4 {line-height: ceil($font-l   / $font-baseline) * $font-baseline}
-h5, .h5 {line-height: ceil($font-m   / $font-baseline) * $font-baseline}
+h1, .h1 {line-height: ceil($font-h1-desktop / $font-baseline) * $font-baseline}
+h2, .h2 {line-height: ceil($font-h2-desktop / $font-baseline) * $font-baseline}
+h3, .h3 {line-height: ceil($font-h3-desktop / $font-baseline) * $font-baseline}
+h4, .h4 {line-height: ceil($font-h4-desktop / $font-baseline) * $font-baseline}
+h5, .h5 {line-height: ceil($font-h5-desktop / $font-baseline) * $font-baseline}
 
 @each $el in $type-normal-els {
 	#{$el} {
 		line-height: $font-baseline;
 	}
-}
-
-// List items
-li:nth-child(n+2) {
-	padding-top: 0;
 }
 
 
@@ -111,10 +106,6 @@ li:nth-child(n+2) {
 	}
 }
 
-table, form {
-	margin-top: $size-m;
-}
-
 h1, .h1 {
 	margin-bottom: $font-baseline*1.5;
 	padding-top: $font-baseline*1.5;
@@ -132,6 +123,14 @@ h4, .h4, h5, .h5 {
 	padding-top: $font-baseline / 2;
 }
 
+li:nth-child(n+2) {
+	padding-top: 0;
+}
+
+table, form {
+	margin-top: $size-m;
+}
+
 
 // Responsive
 // ============
@@ -142,11 +141,11 @@ body {
 	// Tablet
 	@media (max-width: $tablet-max) {
 
-		h1, .h1 {font-size: $font-xl * $xheight-header; line-height: ceil($font-xl / $font-baseline) * $font-baseline}
-		h2, .h2 {font-size: $font-l  * $xheight-header; line-height: ceil($font-l  / $font-baseline) * $font-baseline}
-		h3, .h3 {font-size: $font-l  * $xheight-header; line-height: ceil($font-l  / $font-baseline) * $font-baseline}
-		h4, .h4 {font-size: $font-m  * $xheight-header; line-height: ceil($font-m  / $font-baseline) * $font-baseline}
-		h5, .h5 {font-size: $font-s  * $xheight-header; line-height: ceil($font-s  / $font-baseline) * $font-baseline}
+		h1, .h1 {font-size: $font-h1-tablet * $xheight-header; line-height: ceil($font-h1-tablet / $font-baseline) * $font-baseline}
+		h2, .h2 {font-size: $font-h2-tablet * $xheight-header; line-height: ceil($font-h2-tablet / $font-baseline) * $font-baseline}
+		h3, .h3 {font-size: $font-h3-tablet * $xheight-header; line-height: ceil($font-h3-tablet / $font-baseline) * $font-baseline}
+		h4, .h4 {font-size: $font-h4-tablet * $xheight-header; line-height: ceil($font-h4-tablet / $font-baseline) * $font-baseline}
+		h5, .h5 {font-size: $font-h5-tablet * $xheight-header; line-height: ceil($font-h5-tablet / $font-baseline) * $font-baseline}
 
 		@each $el in $type-header-els {
 			#{$el} {
@@ -158,11 +157,11 @@ body {
 	// Mobile
 	@media (max-width: $mobile-max) {
 
-		h1, .h1 {font-size: $font-l * $xheight-header; line-height: ceil($font-l / $font-baseline) * $font-baseline}
-		h2, .h2 {font-size: $font-l * $xheight-header; line-height: ceil($font-l / $font-baseline) * $font-baseline}
-		h3, .h3 {font-size: $font-l * $xheight-header; line-height: ceil($font-l / $font-baseline) * $font-baseline}
-		h4, .h4 {font-size: $font-m * $xheight-header; line-height: ceil($font-m / $font-baseline) * $font-baseline}
-		h5, .h5 {font-size: $font-s * $xheight-header; line-height: ceil($font-s / $font-baseline) * $font-baseline}
+		h1, .h1 {font-size: $font-h1-mobile * $xheight-header; line-height: ceil($font-h1-mobile / $font-baseline) * $font-baseline}
+		h2, .h2 {font-size: $font-h2-mobile * $xheight-header; line-height: ceil($font-h2-mobile / $font-baseline) * $font-baseline}
+		h3, .h3 {font-size: $font-h3-mobile * $xheight-header; line-height: ceil($font-h3-mobile / $font-baseline) * $font-baseline}
+		h4, .h4 {font-size: $font-h4-mobile * $xheight-header; line-height: ceil($font-h4-mobile / $font-baseline) * $font-baseline}
+		h5, .h5 {font-size: $font-h5-mobile * $xheight-header; line-height: ceil($font-h5-mobile / $font-baseline) * $font-baseline}
 
 		@each $el in $type-header-els {
 			#{$el} {
