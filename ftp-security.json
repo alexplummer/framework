@@ -1,3 +1,4 @@
+// Copy this file one level up so it's not committed then delete this line
 {"values":
     {"host":"ftp..com", "user":"", "password":"*"}
 }
